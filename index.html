@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futura | Sistemas de Automatización</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-bold text-xl tracking-tight text-slate-900">FUTURA</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#solucion" class="text-slate-600 hover:text-blue-600 transition">Solución</a>
+                    <a href="#proceso" class="text-slate-600 hover:text-blue-600 transition">Proceso</a>
+                    <a href="#planes" class="text-slate-600 hover:text-blue-600 transition">Planes</a>
+                </div>
+                <div>
+                    <a href="#contacto" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition">Agendar Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">
+                Tu negocio en <span class="gradient-text">piloto automático</span>.
+            </h1>
+            <p class="mt-4 text-xl text-slate-600 max-w-2xl mx-auto mb-10">
+                Instalamos sistemas de agendamiento y respuesta automática que convierten desconocidos en clientes mientras tú te enfocas en operar.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#contacto" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-base font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">Comenzar ahora</a>
+                <a href="#como-funciona" class="bg-slate-100 text-slate-700 px-8 py-3 rounded-lg text-base font-medium hover:bg-slate-200 transition">Ver cómo funciona</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Tech Stack -->
+    <section class="py-10 border-y border-slate-100 bg-slate-50/50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-6">Potenciado por tecnología de punta</p>
+            <div class="flex justify-center items-center gap-12 opacity-60 grayscale">
+                <span class="text-xl font-bold text-slate-800">n8n</span>
+                <span class="text-xl font-bold text-slate-800">WhatsApp API</span>
+                <span class="text-xl font-bold text-slate-800">Cal.com</span>
+                <span class="text-xl font-bold text-slate-800">Supabase</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. The Problem -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">El costo de la operación manual</h2>
+                <p class="mt-4 text-slate-600">La mayoría de los negocios locales pierden el 30% de sus ventas por falta de respuesta inmediata.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Respuestas Tardías</h3>
+                    <p class="text-slate-600 text-sm">Un cliente que espera más de 5 minutos por una respuesta en WhatsApp probablemente comprará a tu competencia.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Agenda Desordenada</h3>
+                    <p class="text-slate-600 text-sm">La gestión manual de horarios genera choques, ausencias y pérdida de ingresos por huecos no ocupados.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-slate-900 mb-2">Cero Fidelización</h3>
+                    <p class="text-slate-600 text-sm">Sin un sistema que recuerde al cliente cuándo volver, la retención depende completamente de su memoria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. The Solution -->
+    <section id="solucion" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">El sistema que trabaja 24/7</h2>
+                    <p class="text-slate-300 mb-8 text-lg">No es solo una web, es una infraestructura completa de ventas y atención diseñada para eliminar la fricción.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Respuesta Inmediata:</strong> Tu WhatsApp contesta precios y servicios en segundos.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Agendamiento Autónomo:</strong> El cliente elige su hora y se sincroniza con tu calendario.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-blue-400 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>Recordatorios Inteligentes:</strong> Reduce el ausentismo en un 80% con avisos automáticos.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-2 rounded-xl border border-slate-700 shadow-2xl">
+                    <div class="bg-white rounded-lg p-6 text-slate-800">
+                        <div class="flex items-center space-x-3 mb-4 border-b pb-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">N</div>
+                            <div>
+                                <p class="font-bold text-sm">Asistente Futura</p>
+                                <p class="text-xs text-slate-500">En línea</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-slate-100 p-3 rounded-lg rounded-tl-none max-w-[85%]">Hola, quisiera agendar una mantención para mi auto.</div>
+                            <div class="bg-blue-600 text-white p-3 rounded-lg rounded-tr-none max-w-[85%] ml-auto">¡Claro! Tengo disponibilidad este jueves a las 10:00 o a las 15:00 hrs. ¿Cuál prefieres?</div>
+                            <div class="bg-slate-100 p-3 rounded-lg rounded-tl-none max-w-[85%]">A las 15:00 hrs está perfecto.</div>
+                            <div class="bg-blue-600 text-white p-3 rounded-lg rounded-tr-none max-w-[85%] ml-auto">Agendado. Te enviaré un recordatorio el miércoles. ¡Gracias!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. How it Works -->
+    <section id="proceso" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Implementación en 3 pasos</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-slate-900">1</div>
+                    <h3 class="text-xl font-semibold mb-3">Diagnóstico</h3>
+                    <p class="text-slate-600">Analizamos tus procesos actuales y detectamos dónde estás perdiendo tiempo y dinero.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-slate-900">2</div>
+                    <h3 class="text-xl font-semibold mb-3">Arquitectura</h3>
+                    <p class="text-slate-600">Construimos y conectamos tus herramientas (WhatsApp, Calendario, Base de Datos) sin interrumpir tu operación.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-slate-900">3</div>
+                    <h3 class="text-xl font-semibold mb-3">Despegue</h3>
+                    <p class="text-slate-600">Activamos el sistema. Tú recibes las notificaciones y los clientes agendados, sin esfuerzo manual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Features Detail -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Todo lo que incluye tu sistema</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs mt-1">.</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Landing Page de Alta Conversión</h4>
+                                <p class="text-slate-600 text-sm mt-1">Diseño limpio y rápido enfocado en que el cliente agende, no solo en que "mire".</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs mt-1">.</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">CRM Básico Integrado</h4>
+                                <p class="text-slate-600 text-sm mt-1">Cada cliente que escribe queda guardado en una base de datos segura y organizada.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs mt-1">.</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Workflows Personalizados</h4>
+                                <p class="text-slate-600 text-sm mt-1">Lógica adaptada a tu rubro (recordatorios de aceite, citas de barbero, etc).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-2xl text-blue-600 mb-2">24/7</h4>
+                        <p class="text-slate-600 text-sm">Disponibilidad de atención ininterrumpida.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-2xl text-blue-600 mb-2">0%</h4>
+                        <p class="text-slate-600 text-sm">Comisiones por venta o agendamiento.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-2xl text-blue-600 mb-2">100%</h4>
+                        <p class="text-slate-600 text-sm">Propiedad de tu sistema y tus datos.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                        <h4 class="font-bold text-2xl text-blue-600 mb-2">&lt;1s</h4>
+                        <p class="text-slate-600 text-sm">Tiempo de respuesta promedio del sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Pricing -->
+    <section id="planes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Inversión Transparente</h2>
+                <p class="mt-4 text-slate-600">Sin costos ocultos. Pagas por la instalación y una mensualidad de mantenimiento.</p>
+            </div>
+            <div class="max-w-lg mx-auto bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="px-6 py-8 sm:p-10 sm:pb-6">
+                    <div class="flex justify-center">
+                        <span class="inline-flex px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                            Más popular
+                        </span>
+                    </div>
+                    <div class="mt-4 flex justify-center items-baseline text-6xl font-extrabold text-slate-900">
+                        $190.000
+                        <span class="ml-1 text-2xl font-medium text-slate-500">CLP</span>
+                    </div>
+                    <p class="mt-4 text-slate-500 text-center">Pago único por configuración e instalación.</p>
+                    <div class="mt-8 flex justify-center">
+                        <div class="text-center">
+                            <span class="text-2xl font-bold text-slate-900">+$35.000</span>
+                            <span class="text-sm text-slate-500"> /mes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pt-6 pb-8 bg-slate-50 sm:px-10 sm:py-8 border-t border-slate-100">
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Configuración completa de WhatsApp API
+                        </li>
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Landing Page optimizada
+                        </li>
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Sistema de agendamiento automático
+                        </li>
+                        <li class="flex items-center text-slate-600 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Soporte técnico y hosting incluido
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <a href="#contacto" class="block w-full bg-slate-900 text-white text-center px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition">Solicitar implementación</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Preguntas frecuentes</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 mb-2">¿Necesito conocimientos técnicos para usarlo?</h3>
+                    <p class="text-slate-600 text-sm">No. El sistema funciona en segundo plano. Tú solo recibes las notificaciones en tu celular y ves tu agenda llena.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 mb-2">¿Puedo perder mis datos si dejo el servicio?</h3>
+                    <p class="text-slate-600 text-sm">Jamás. La base de datos de tus clientes es 100% tuya. Te la entregamos en cualquier formato que necesites.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                    <h3 class="font-bold text-slate-900 mb-2">¿Cuánto tiempo toma la implementación?</h3>
+                    <p class="text-slate-600 text-sm">Dependiendo de la complejidad, entre 5 y 10 días hábiles para tener todo probado y funcionando.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Final CTA -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-slate-900 mb-6">¿Listo para escalar tu operación?</h2>
+            <p class="text-xl text-slate-600 mb-10">Deja de perder clientes por no contestar a tiempo. Hablemos de cómo instalar un sistema de ventas en tu negocio.</p>
+            <a href="https://wa.me/56973027813?text=Hola,%20me%20interesa%20el%20sistema%20de%20automatización" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-blue-700 transition shadow-xl shadow-blue-600/20">
+                Agendar llamada de descubrimiento
+            </a>
+            <p class="mt-6 text-sm text-slate-500">Respuesta garantizada en menos de 2 horas.</p>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 py-12 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 text-sm"> 2026 Nexus Systems. Santiago, Chile.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
