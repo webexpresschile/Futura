@@ -18,28 +18,28 @@
         </thead>
         <tbody>
           <tr>
-            <td class="row-label">Modelo de cobro</td>
-            <td>Tu tiempo perdido</td>
-            <td>Cobras por profesional</td>
-            <td class="highlight strong">Tarifa Plana Ilimitada</td>
+            <td class="row-label" data-label="COMPARATIVA">Modelo de cobro</td>
+            <td data-label="HAZLO TÚ (CAOS)">Tu tiempo perdido</td>
+            <td data-label="AGENDAPRO / OTROS">Cobras por profesional</td>
+            <td class="highlight strong" data-label="FUTURA NODES">Tarifa Plana Ilimitada</td>
           </tr>
           <tr>
-            <td class="row-label">WhatsApp Automatizado</td>
-            <td>Respondes a mano</td>
-            <td>Muy básico / Caro</td>
-            <td class="highlight">SÍ, Vende 24/7</td>
+            <td class="row-label" data-label="COMPARATIVA">WhatsApp Automatizado</td>
+            <td data-label="HAZLO TÚ (CAOS)">Respondes a mano</td>
+            <td data-label="AGENDAPRO / OTROS">Muy básico / Caro</td>
+            <td class="highlight" data-label="FUTURA NODES">SÍ, Vende 24/7</td>
           </tr>
           <tr>
-            <td class="row-label">Propiedad de datos</td>
-            <td>Tu libreta</td>
-            <td>Secuestrados por la App</td>
-            <td class="highlight">100% TUYOS (Exportable)</td>
+            <td class="row-label" data-label="COMPARATIVA">Propiedad de datos</td>
+            <td data-label="HAZLO TÚ (CAOS)">Tu libreta</td>
+            <td data-label="AGENDAPRO / OTROS">Secuestrados por la App</td>
+            <td class="highlight" data-label="FUTURA NODES">100% TUYOS (Exportable)</td>
           </tr>
           <tr>
-            <td class="row-label">Presencia Web</td>
-            <td>Solo redes sociales</td>
-            <td>Perfil genérico</td>
-            <td class="highlight">Sitio Web Profesional Propio</td>
+            <td class="row-label" data-label="COMPARATIVA">Presencia Web</td>
+            <td data-label="HAZLO TÚ (CAOS)">Solo redes sociales</td>
+            <td data-label="AGENDAPRO / OTROS">Perfil genérico</td>
+            <td class="highlight" data-label="FUTURA NODES">Sitio Web Profesional Propio</td>
           </tr>
         </tbody>
       </table>
@@ -95,5 +95,55 @@
   }
   .highlight.strong {
     font-weight: 900;
+  }
+
+  @media (max-width: 768px) {
+    .wrapper-table {
+      padding: 0.5rem;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .comparison-table {
+      display: grid;
+      gap: 1.5rem;
+      min-width: unset;
+    }
+    .comparison-table thead {
+      display: none;
+    }
+    .comparison-table tbody {
+      display: contents;
+    }
+    .comparison-table tr {
+      display: grid;
+      grid-template-columns: 1fr;
+      border: var(--border-width) solid var(--color-border);
+      box-shadow: 4px 4px 0px #000;
+      background: white;
+    }
+    .comparison-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      border-bottom: 1px solid var(--color-border);
+      border-right: none;
+      font-size: 0.95rem;
+    }
+    .comparison-table td::before {
+      content: attr(data-label);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    .comparison-table td:last-child {
+      border-bottom: none;
+      background-color: var(--color-primary);
+      color: white;
+      font-weight: 700;
+    }
   }
 </style>
