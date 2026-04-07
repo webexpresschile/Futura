@@ -99,61 +99,16 @@
 
   @media (max-width: 768px) {
     .wrapper-table {
-      padding: 0.5rem;
-      background: transparent;
-      border: none;
-      box-shadow: none;
+      padding: 1rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .comparison-table {
-      display: grid;
-      gap: 1.5rem;
-      min-width: unset;
+      min-width: 600px;
+      font-size: 0.9rem;
     }
-    .comparison-table thead {
-      display: none;
-    }
-    .comparison-table tbody {
-      display: contents;
-    }
-    .comparison-table tr {
-      display: grid;
-      grid-template-columns: 1fr;
-      border: var(--border-width) solid var(--color-border);
-      box-shadow: 4px 4px 0px #000;
-      background: white;
-    }
-    .comparison-table td {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      border-bottom: 1px solid var(--color-border);
-      border-right: none;
-      font-size: 0.95rem;
-      background-color: var(--color-primary) !important;
-      color: white !important;
-    }
-    .comparison-table td::before {
-      content: attr(data-label);
-      font-weight: 900;
-      text-transform: uppercase;
-      color: var(--color-primary);
-      margin-right: 1rem;
-      flex-shrink: 0;
-    }
-    .comparison-table td:last-child {
-      border-bottom: none;
-      background-color: var(--color-primary);
-      color: white;
-      font-weight: 700;
-      border: var(--border-width) solid white;
-    }
-    .comparison-table tr {
-      background-color: var(--color-primary);
-    }
-    .comparison-table td {
-      background-color: white;
-      color: var(--color-primary);
+    .comparison-table th, .comparison-table td {
+      padding: 0.75rem;
     }
   }
 </style>
