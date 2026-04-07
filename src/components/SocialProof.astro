@@ -1,26 +1,26 @@
 ---
 ---
 <section class="social-proof">
-  <div class="container">
-    <p class="sp-text">Usado por talleres de vanguardia en Santiago, Providencia, Las Condes y más</p>
+  <div class="container text-center">
+    <p class="sp-text">USADO POR TALLERES LÍDERES EN SANTIAGO, PROVIDENCIA Y LAS CONDES</p>
     <div class="marquee-container">
       <div class="marquee">
         <!-- Replicating content for continuous scrolling -->
-        <span>Taller Mecánico Titanium</span>
-        <span class="dot">•</span>
-        <span>AutoServicio Pro</span>
-        <span class="dot">•</span>
-        <span>Garage Central</span>
-        <span class="dot">•</span>
-        <span>MotorExperts</span>
-        <span class="dot">•</span>
-        <span>Taller Mecánico Titanium</span>
-        <span class="dot">•</span>
-        <span>AutoServicio Pro</span>
-        <span class="dot">•</span>
-        <span>Garage Central</span>
-        <span class="dot">•</span>
-        <span>MotorExperts</span>
+        <span>TALLER TITANIUM</span>
+        <span class="dot">★</span>
+        <span>AUTOSERVICIO PRO</span>
+        <span class="dot">★</span>
+        <span>GARAGE CENTRAL</span>
+        <span class="dot">★</span>
+        <span>MOTOR EXPERTS</span>
+        <span class="dot">★</span>
+        <span>TALLER TITANIUM</span>
+        <span class="dot">★</span>
+        <span>AUTOSERVICIO PRO</span>
+        <span class="dot">★</span>
+        <span>GARAGE CENTRAL</span>
+        <span class="dot">★</span>
+        <span>MOTOR EXPERTS</span>
       </div>
     </div>
   </div>
@@ -29,40 +29,42 @@
 <style>
   .social-proof {
     padding: var(--space-4) 0;
-    border-top: 1px solid var(--color-surface-alt);
-    border-bottom: 1px solid var(--color-surface-alt);
-    background-color: var(--color-bg);
+    border-bottom: var(--border-width) solid var(--color-border);
+    background-color: var(--color-accent);
   }
   .sp-text {
-    text-align: center;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
     margin-bottom: var(--space-4);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 0px #000;
   }
   .marquee-container {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     width: 100%;
+    background: white;
+    padding: 1rem 0;
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: 4px 4px 0px #000;
+    transform: rotate(1deg);
   }
   .marquee {
     display: inline-block;
     animation: marquee 20s linear infinite;
   }
   .marquee span {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     font-family: var(--font-display);
-    font-weight: 700;
-    color: var(--color-primary-light);
-    margin: 0 var(--space-2);
+    font-weight: 900;
+    color: var(--color-primary);
+    margin: 0 var(--space-4);
+    text-transform: uppercase;
   }
   .marquee .dot {
-    color: var(--color-border);
-    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-size: 1.5rem;
   }
   
   @keyframes marquee {

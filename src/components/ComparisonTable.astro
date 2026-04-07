@@ -1,58 +1,45 @@
 ---
 ---
 <section class="comparison-section">
-  <div class="container container-narrow text-center gs-comp-header">
-    <h2>Diseñado explícitamente para talleres</h2>
-    <p>La diferencia frente a las soluciones genéricas y los sistemas manuales.</p>
+  <div class="container container-narrow text-center gs-comp-header" style="margin-bottom:4rem;">
+    <h2>Nosotros vs Los Demás</h2>
   </div>
   
   <div class="container">
-    <div class="table-wrapper gs-table">
+    <div class="brutalist-card wrapper-table gs-table">
       <table class="comparison-table">
         <thead>
           <tr>
-            <th>Funcionalidad</th>
-            <th class="manual">Hacerlo manual</th>
-            <th class="competitor">Agendapro / Otros</th>
-            <th class="highlight">Futura Nodes</th>
+            <th>CARACTERÍSTICA</th>
+            <th class="manual">MANUAL</th>
+            <th class="competitor">OTRO SOFTWARE</th>
+            <th class="highlight">FUTURA NODES</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="row-label">Modelo de cobro</td>
-            <td>Tu tiempo (alto costo)</td>
-            <td>Por cantidad de empleados</td>
-            <td class="highlight strong">Plana, sin límite</td>
+            <td>Tu tiempo</td>
+            <td>Por Empleado</td>
+            <td class="highlight strong">Tarifa Plana</td>
           </tr>
           <tr>
-            <td class="row-label">Automatización WhatsApp</td>
-            <td><span class="x-mark">✕</span></td>
-            <td>Limitada / Cobro extra</td>
-            <td class="highlight"><span class="check-mark">✓ 100% nativo</span></td>
+            <td class="row-label">Bot de WhatsApp</td>
+            <td>NO</td>
+            <td>Básico / Cobro extra</td>
+            <td class="highlight">SÍ, Inteligente</td>
           </tr>
           <tr>
-            <td class="row-label">Propiedad de los datos</td>
-            <td><span class="check-mark">✓</span></td>
-            <td>Agendapro</td>
-            <td class="highlight"><span class="check-mark">✓ 100% tuyos</span></td>
+            <td class="row-label">Propiedad de base</td>
+            <td>SÍ</td>
+            <td>De la App</td>
+            <td class="highlight">100% TUYA</td>
           </tr>
           <tr>
-            <td class="row-label">Landing page propia</td>
-            <td><span class="x-mark">✕</span></td>
-            <td>Perfil en portal</td>
-            <td class="highlight"><span class="check-mark">✓ Sitio web profesional</span></td>
-          </tr>
-          <tr>
-            <td class="row-label">Gestión post-servicio</td>
-            <td><span class="x-mark">✕</span></td>
-            <td>General</td>
-            <td class="highlight"><span class="check-mark">✓ Especial para taller</span></td>
-          </tr>
-          <tr>
-            <td class="row-label">Soporte técnico</td>
-            <td>N/A</td>
-            <td>Ticket por email</td>
-            <td class="highlight"><span class="check-mark">✓ Directo por WhatsApp</span></td>
+            <td class="row-label">Web Propia</td>
+            <td>NO</td>
+            <td>Perfil Genérico</td>
+            <td class="highlight">Sitio Brutal Propio</td>
           </tr>
         </tbody>
       </table>
@@ -60,85 +47,53 @@
   </div>
 </section>
 
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
-  if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".gs-comp-header", {
-      scrollTrigger: { trigger: ".comparison-section", start: "top 80%" },
-      y: 30, opacity: 0, duration: 0.8
-    });
-
-    gsap.from(".gs-table", {
-      scrollTrigger: { trigger: ".table-wrapper", start: "top 80%" },
-      y: 30, opacity: 0, duration: 0.8, delay: 0.2
-    });
-  }
-</script>
-
 <style>
   .comparison-section {
     background-color: var(--color-bg);
   }
-  .container-narrow {
-    max-width: 800px;
-  }
-  .text-center {
-    text-align: center;
-    margin-bottom: var(--space-8);
-  }
-  .table-wrapper {
+  .wrapper-table {
     overflow-x: auto;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
+    padding: 0;
   }
   .comparison-table {
     width: 100%;
-    min-width: 800px;
+    min-width: 700px;
     border-collapse: collapse;
     background: white;
     text-align: left;
   }
   .comparison-table th, .comparison-table td {
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem;
+    border-bottom: var(--border-width) solid var(--color-border);
+    border-right: var(--border-width) solid var(--color-border);
+  }
+  .comparison-table th:last-child, .comparison-table td:last-child {
+    border-right: none;
   }
   .comparison-table tr:last-child td {
     border-bottom: none;
   }
   .comparison-table th {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    font-weight: 900;
     color: var(--color-primary);
-    background-color: var(--color-surface);
-    font-weight: 700;
+    background-color: var(--color-surface-alt);
   }
   .row-label {
-    font-weight: 600;
+    font-weight: 800;
     color: var(--color-primary);
-    width: 30%;
+    font-size: 1.125rem;
   }
   .highlight {
-    background-color: var(--color-surface-alt);
-    color: var(--color-primary);
-    position: relative;
+    background-color: var(--color-accent);
+    color: white !important;
   }
   .comparison-table th.highlight {
     background-color: var(--color-primary);
     color: white;
   }
   .highlight.strong {
-    font-weight: 700;
-  }
-  .check-mark {
-    color: var(--color-success);
-    font-weight: 700;
-  }
-  .x-mark {
-    color: #ba1a1a;
+    font-weight: 900;
   }
 </style>

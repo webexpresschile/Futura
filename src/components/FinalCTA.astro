@@ -1,55 +1,33 @@
 ---
 ---
 <section class="final-cta" id="demo">
-  <div class="container container-narrow text-center gs-final-cta">
-    <h2>Tu competencia ya está automatizando.<br>¿Cuándo empiezas tú?</h2>
-    <p>La tecnología es la nueva ventaja competitiva en el rubro automotriz. No te quedes atrás manejando tu taller con lápiz, papel y horas de chat.</p>
-    <a href="https://wa.me/something" class="btn btn-primary cta-large">Agendar demo gratis</a>
+  <div class="container container-narrow text-center">
+    <h2>TU COMPETENCIA YA AUTOMATIZÓ.<br>¿QUÉ ESPERAS TÚ?</h2>
+    <a href="#contacto" class="btn btn-secondary cta-huge">AGENDA DEMO AHORA</a>
   </div>
 </section>
 
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
-  if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".gs-final-cta", {
-      scrollTrigger: { trigger: ".final-cta", start: "top 80%" },
-      scale: 0.95, opacity: 0, duration: 1
-    });
-  }
-</script>
-
 <style>
   .final-cta {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     color: white;
-    padding: var(--space-16) 0;
-  }
-  .container-narrow {
-    max-width: 800px;
-  }
-  .text-center {
-    text-align: center;
+    padding: 6rem 0;
+    border-bottom: var(--border-width) solid var(--color-border);
   }
   .final-cta h2 {
     color: white;
-    margin-bottom: var(--space-4);
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-shadow: 4px 4px 0px #000;
+    margin-bottom: 4rem;
   }
-  .final-cta p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.25rem;
-    margin-bottom: var(--space-6);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  .cta-huge {
+    font-size: 2rem;
+    padding: 1.5rem 3rem;
   }
-  .cta-large {
-    font-size: 1.25rem;
-    padding: 1rem 2.5rem;
-    border-radius: var(--radius-sm);
+  @media (max-width: 600px) {
+    .cta-huge {
+      font-size: 1.25rem;
+      padding: 1rem 1.5rem;
+    }
   }
 </style>

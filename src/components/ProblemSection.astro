@@ -3,30 +3,30 @@
 <section class="problem-section" id="funciones">
   <div class="container container-narrow">
     <div class="problem-header text-center gs-fade">
+      <div class="badge-accent">EL PROBLEMA</div>
       <h2>¿Cuánto dinero pierdes por no responder a tiempo?</h2>
-      <p>La coordinación por WhatsApp consume horas y los clientes no esperan.</p>
     </div>
     
     <div class="problem-cards">
-      <div class="card gs-card">
+      <div class="brutalist-card gs-card">
         <div class="icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
         </div>
         <h3>Citas Perdidas</h3>
         <p>Los clientes cotizan en varios lados y agendan con el primero que responde.</p>
       </div>
       
-      <div class="card gs-card">
+      <div class="brutalist-card gs-card card-blue">
         <div class="icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
         </div>
         <h3>Horas Desperdiciadas</h3>
-        <p>Estar pegado al celular respondiendo mensajes repetitivos te quita foco del taller.</p>
+        <p>Estar pegado al celular respondiendo mensajes te quita foco del taller.</p>
       </div>
 
-      <div class="card gs-card">
+      <div class="brutalist-card gs-card">
         <div class="icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
         </div>
         <h3>Sin Recordatorios</h3>
         <p>Alumnos olvidadizos que no llegan a su cita son espacio perdido en tu agenda.</p>
@@ -41,73 +41,65 @@
   
   if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".problem-header", {
+    gsap.from(".problem-cards .gs-card", {
       scrollTrigger: { trigger: ".problem-section", start: "top 80%" },
-      y: 30, opacity: 0, duration: 0.8
-    });
-
-    gsap.from(".gs-card", {
-      scrollTrigger: { trigger: ".problem-cards", start: "top 80%" },
-      y: 40, opacity: 0, duration: 0.6, stagger: 0.2
+      y: 20, opacity: 0, duration: 0.5, stagger: 0.2
     });
   }
 </script>
 
 <style>
   .problem-section {
-    background-color: var(--color-primary);
-    color: white;
-    padding: var(--space-12) 0;
+    background-color: #FEF08A; /* Intense Yellow */
+    border-top: var(--border-width) solid var(--color-border);
   }
-  .container-narrow {
-    max-width: 1000px;
+  .badge-accent {
+    display: inline-block;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    transform: rotate(-2deg);
+    border: 2px solid white;
+    box-shadow: 4px 4px 0px var(--color-primary);
   }
   .problem-header {
     margin-bottom: var(--space-8);
   }
   .problem-header h2 {
-    color: white;
-  }
-  .problem-header p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.125rem;
-  }
-  .text-center {
-    text-align: center;
+    color: var(--color-primary);
   }
   .problem-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
   }
-  .card {
-    background-color: var(--color-primary-light);
-    border: 1px solid rgba(255,255,255,0.05);
-    padding: var(--space-4);
-    border-radius: var(--radius-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  }
   .icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-bg);
+    border: var(--border-width) solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 0px var(--color-border);
     color: var(--color-accent);
-    margin-bottom: var(--space-3);
   }
-  .card h3 {
+  .card-blue {
+    background-color: var(--color-accent);
     color: white;
-    font-size: 1.25rem;
-    margin-bottom: var(--space-2);
   }
-  .card p {
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 0;
-    font-size: 0.9375rem;
+  .card-blue p {
+    color: white;
+  }
+  .card-blue .icon {
+    color: white;
+    background: var(--color-primary);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .problem-cards {
       grid-template-columns: 1fr;
     }

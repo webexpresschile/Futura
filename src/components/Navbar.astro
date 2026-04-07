@@ -3,7 +3,7 @@
 <header class="navbar" id="navbar">
   <div class="container navbar-inner">
     <div class="logo">
-      <a href="/">Futura Nodes</a>
+      <a href="/">FUTURA NODES</a>
     </div>
     <nav class="nav-links">
       <a href="#funciones">Funciones</a>
@@ -15,7 +15,6 @@
     </div>
   </div>
 </header>
-
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -29,48 +28,66 @@
     });
   }
 </script>
-
 <style>
   .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
+    background: var(--color-bg);
     z-index: 100;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
+    border-bottom: var(--border-width) solid var(--color-border);
+    transition: box-shadow 0.3s ease;
   }
   .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 0px rgba(0,0,0,0.1);
   }
   .navbar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 90px;
+    background: transparent;
   }
   .logo a {
     font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 900;
     color: var(--color-primary);
-    letter-spacing: -0.02em;
+    background: var(--color-accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: 3px 3px 0px #000;
+    transition: transform 0.2s ease;
+  }
+  .logo a:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #000;
   }
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
   }
   .nav-links a {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    color: var(--color-text-muted);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-transform: uppercase;
+    position: relative;
   }
-  .nav-links a:hover {
-    color: var(--color-primary);
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
   }
   @media (max-width: 768px) {
     .nav-links {

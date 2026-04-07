@@ -1,161 +1,120 @@
 ---
 ---
 <section class="pricing-section" id="precios">
-  <div class="container container-narrow text-center gs-pricing-header">
-    <h2>Invierte hoy, recupera tu tiempo mañana</h2>
-    <p>Precios claros, sin costos ocultos por transacciones ni límites por cantidad de mecánicos.</p>
+  <div class="container container-narrow text-center gs-pricing-header" style="margin-bottom: 4rem;">
+    <h2>Precios Agresivos</h2>
+    <p>Sin costos ocultos. Crecimiento sin frenos.</p>
   </div>
   
   <div class="container pricing-container">
-    <div class="pricing-card gs-pricing">
+    <div class="brutalist-card gs-pricing pricing-card">
       <div class="card-header">
-        <h3>Plan Mensual Full</h3>
+        <h3>PLAN FULL</h3>
         <div class="price">
-          <span class="currency">$</span><span class="amount">120.000</span><span class="period">/mes</span>
+          <span class="currency">$</span><span class="amount">120k</span><span class="period">/mes</span>
         </div>
-        <p class="setup-fee">+ $100.000 (pago único instalación)</p>
+        <p class="setup-fee">+ $100k (Setup)</p>
       </div>
       <div class="card-body">
         <ul>
-          <li><span class="check">✓</span> Bot de WhatsApp IA 24/7</li>
-          <li><span class="check">✓</span> Landing page personalizada</li>
-          <li><span class="check">✓</span> Recordatorios automáticos</li>
-          <li><span class="check">✓</span> Calendarios y mecánicos ilimitados</li>
-          <li><span class="check">✓</span> Soporte continuo por WhatsApp</li>
+          <li><strong>✓</strong> Bot IA Inagotable</li>
+          <li><strong>✓</strong> Sitio Web Brutalista</li>
+          <li><strong>✓</strong> Recordatorios 100% Automáticos</li>
+          <li><strong>✓</strong> Agenda Ilimitada</li>
         </ul>
-        <a href="#contacto" class="btn btn-secondary full-width">Agendar demo</a>
+        <a href="#contacto" class="btn btn-secondary full-width">AGENDAR DEMO</a>
       </div>
     </div>
     
-    <div class="pricing-card highlighted gs-pricing">
+    <div class="brutalist-card gs-pricing pricing-card card-blue">
       <div class="badge-wrapper">
-        <span class="badge pricing-badge">Precio de lanzamiento</span>
+        <span class="badge">LANZAMIENTO</span>
       </div>
       <div class="card-header">
-        <h3>Licitación Fundadora</h3>
+        <h3 style="border-color: white;">LICITACIÓN</h3>
         <div class="price">
-          <span class="currency">$</span><span class="amount">69.900</span><span class="period">/mes</span>
+          <span class="currency">$</span><span class="amount" style="color:white;">69k</span><span class="period" style="color:white;">/mes</span>
         </div>
-        <p class="setup-fee">+ $50.000 (pago único instalación)</p>
+        <p class="setup-fee" style="color:white;">+ $50k (Setup)</p>
       </div>
       <div class="card-body">
         <ul>
-          <li><span class="check">✓</span> <strong>Todo lo del Plan Full</strong></li>
-          <li><span class="check">✓</span> Prioridad en desarrollo de funciones</li>
-          <li><span class="check">✓</span> Precio congelado de por vida</li>
-          <li><span class="check">✓</span> Auditoría digital gratis</li>
-          <li><span class="check">✓</span> Cupos limitados a primeros 20 talleres</li>
+          <li><strong>✓ TODO EL PLAN FULL</strong></li>
+          <li><strong>✓ Precio asegurado de por vida</strong></li>
+          <li><strong>✓ Prioridad extrema en soporte</strong></li>
+          <li><strong>✓ 20 Cupos (Llenándose rápido)</strong></li>
         </ul>
-        <a href="#contacto" class="btn btn-primary full-width">Quiero este plan</a>
+        <a href="#contacto" class="btn btn-secondary full-width" style="background:#FEF08A; border-color:black;">QUIERO ESTE PLAN</a>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
-  if (typeof window !== 'undefined') {
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".gs-pricing-header", {
-      scrollTrigger: { trigger: ".pricing-section", start: "top 80%" },
-      y: 30, opacity: 0, duration: 0.8
-    });
-
-    gsap.from(".gs-pricing", {
-      scrollTrigger: { trigger: ".pricing-container", start: "top 75%" },
-      y: 40, opacity: 0, duration: 0.6, stagger: 0.2
-    });
-  }
-</script>
-
 <style>
   .pricing-section {
     background-color: var(--color-surface);
   }
-  .container-narrow {
-    max-width: 800px;
-  }
-  .text-center {
-    text-align: center;
-    margin-bottom: var(--space-8);
-  }
   .pricing-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-4);
+    gap: var(--space-6);
     max-width: 900px;
     margin: 0 auto;
   }
   .pricing-card {
-    background-color: white;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--space-6);
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 3rem 2rem;
   }
-  .pricing-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-sm);
+  .card-blue {
+    background-color: var(--color-accent);
+    color: white;
   }
-  .pricing-card.highlighted {
-    border-color: var(--color-accent);
-    box-shadow: var(--shadow-sm);
-  }
-  .pricing-card.highlighted:hover {
-    box-shadow: var(--shadow-hover);
+  .card-blue p, .card-blue li {
+    color: white;
   }
   .badge-wrapper {
     position: absolute;
-    top: -14px;
-    left: 0;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     text-align: center;
   }
-  .pricing-badge {
-    background-color: var(--color-primary);
-    color: white;
-  }
   .card-header {
-    border-bottom: 1px solid var(--color-surface-alt);
-    padding-bottom: var(--space-4);
-    margin-bottom: var(--space-4);
-    text-align: center;
+    border-bottom: var(--border-width) solid var(--color-border);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
   }
   .card-header h3 {
-    font-size: 1.25rem;
-    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    color: var(--color-primary);
   }
-  .highlighted .card-header h3 {
-    color: var(--color-accent);
+  .card-blue .card-header h3 {
+    color: white;
   }
   .price {
     font-family: var(--font-display);
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--color-primary);
+    font-size: 4rem;
+    font-weight: 900;
     line-height: 1;
-    margin: var(--space-2) 0;
+    margin: 1rem 0;
   }
   .currency {
-    font-size: 1.5rem;
+    font-size: 2rem;
     vertical-align: top;
     line-height: 2;
   }
   .period {
-    font-size: 1.125rem;
-    color: var(--color-text-muted);
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
   }
   .setup-fee {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
   }
   .card-body {
     flex: 1;
@@ -163,31 +122,16 @@
     flex-direction: column;
   }
   .card-body ul {
-    margin-bottom: var(--space-6);
-    flex: 1;
+    margin-bottom: 2rem;
   }
   .card-body li {
-    padding: var(--space-2) 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 0.9375rem;
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
   }
-  .check {
-    color: var(--color-accent);
-    font-weight: 700;
-  }
-  .highlighted .check {
-    color: var(--color-success);
-  }
-  .full-width {
-    width: 100%;
-  }
-
   @media (max-width: 768px) {
     .pricing-container {
       grid-template-columns: 1fr;
-      gap: var(--space-8);
     }
   }
 </style>

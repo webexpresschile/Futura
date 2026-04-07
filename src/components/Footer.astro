@@ -2,40 +2,17 @@
 ---
 <footer class="footer" id="contacto">
   <div class="container">
-    <div class="footer-top">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="footer-logo">Futura Nodes</a>
-        <p>Automatizando las reservas del sector automotriz en Chile. Tú trabajas, nosotros agendamos.</p>
+        <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">FUTURA NODES</h2>
+        <p style="color: black; font-weight:700;">Tú trabajas, nosotros agendamos.</p>
       </div>
       
       <div class="footer-links">
-        <div class="link-column">
-          <h4>Producto</h4>
-          <ul>
-            <li><a href="#funciones">Funciones</a></li>
-            <li><a href="#precios">Precios</a></li>
-            <li><a href="#demo">Agendar Demo</a></li>
-          </ul>
-        </div>
-        <div class="link-column">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Privacidad</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; {new Date().getFullYear()} Futura Nodes. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="#" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        <a href="#" aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
+        <a href="#funciones">FUNCIONES</a>
+        <a href="#precios">PRECIOS</a>
+        <a href="#demo">DEMO</a>
+        <a href="#">TÉRMINOS</a>
       </div>
     </div>
   </div>
@@ -43,80 +20,40 @@
 
 <style>
   .footer {
-    background-color: var(--color-surface-alt);
-    padding: var(--space-12) 0 var(--space-6);
+    background-color: white;
+    padding: 4rem 0;
   }
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: var(--space-8);
-    margin-bottom: var(--space-8);
-  }
-  .footer-brand {
-    max-width: 320px;
-  }
-  .footer-logo {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    display: inline-block;
-    margin-bottom: var(--space-2);
-  }
-  .footer-links {
-    display: flex;
-    gap: var(--space-12);
-  }
-  .link-column h4 {
-    font-size: 1rem;
-    margin-bottom: var(--space-3);
-  }
-  .link-column ul {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1);
-  }
-  .link-column a {
-    color: var(--color-text-muted);
-    font-size: 0.9375rem;
-  }
-  .link-column a:hover {
-    color: var(--color-primary);
-  }
-  
-  .footer-bottom {
+  .footer-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--space-4);
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    padding: 3rem;
   }
-  .footer-bottom p {
-    margin: 0;
-    font-size: 0.875rem;
-  }
-  .social-icons {
+  .footer-links {
     display: flex;
-    gap: var(--space-3);
+    gap: 2rem;
   }
-  .social-icons a {
-    color: var(--color-text-muted);
+  .footer-links a {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.25rem;
   }
-  .social-icons a:hover {
-    color: var(--color-primary);
+  .footer-links a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
   }
-
   @media (max-width: 768px) {
-    .footer-links {
-      gap: var(--space-6);
-      width: 100%;
-      justify-content: space-between;
-    }
-    .footer-bottom {
+    .footer-grid {
       flex-direction: column;
-      gap: var(--space-4);
+      gap: 3rem;
       text-align: center;
+      padding: 2rem;
+    }
+    .footer-links {
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 </style>
