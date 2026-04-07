@@ -1,0 +1,80 @@
+---
+---
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <div class="logo">
+      <a href="/">Futura Nodes</a>
+    </div>
+    <nav class="nav-links">
+      <a href="#funciones">Funciones</a>
+      <a href="#precios">Precios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#demo" class="btn btn-primary">Agendar demo</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+      start: "top -50",
+      toggleClass: {className: "scrolled", targets: ".navbar"}
+    });
+  }
+</script>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    z-index: 100;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+  }
+  .navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+  .logo a {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+  .nav-links a:hover {
+    color: var(--color-primary);
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>

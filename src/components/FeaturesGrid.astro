@@ -1,0 +1,144 @@
+---
+---
+<section class="features-section">
+  <div class="container container-narrow text-center gs-features-header">
+    <h2>Ecosistema completo para tu taller</h2>
+    <p>Todo lo que necesitas para operar sin preocupaciones.</p>
+  </div>
+  
+  <div class="container">
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card gs-feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        </div>
+        <h3>Calendarios ilimitados</h3>
+        <p>Agrega a todos tus mecánicos o elevadores sin cobrar extra por cada uno.</p>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="feature-card gs-feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </div>
+        <h3>Bot de WhatsApp 24/7</h3>
+        <p>Atiende consultas, muestra disponibilidad y confirma horas todo el día, todos los días.</p>
+      </div>
+      
+      <!-- Feature 3 -->
+      <div class="feature-card gs-feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <h3>CRM & Historial</h3>
+        <p>Registra la información de cada vehículo y cliente para brindar un servicio personalizado.</p>
+      </div>
+      
+      <!-- Feature 4 -->
+      <div class="feature-card gs-feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </div>
+        <h3>Reseñas Google automáticas</h3>
+        <p>Pide a tus clientes evaluar el servicio, aumentando tu reputación local en Google Maps.</p>
+      </div>
+      
+      <!-- Feature 5 -->
+      <div class="feature-card gs-feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <h3>Seguimiento post-servicio</h3>
+        <p>Envía consejos o promociones automáticamente semanas después de su visita.</p>
+      </div>
+      
+      <!-- Feature 6 -->
+      <div class="feature-card gs-feature">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+        </div>
+        <h3>Dashboard para dueños</h3>
+        <p>Mide cuántas citas tienes agendadas y cuántas recuperaste, todo en tiempo real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".gs-features-header", {
+      scrollTrigger: { trigger: ".features-section", start: "top 80%" },
+      y: 30, opacity: 0, duration: 0.8
+    });
+
+    gsap.from(".gs-feature", {
+      scrollTrigger: { trigger: ".features-grid", start: "top 75%" },
+      y: 30, opacity: 0, duration: 0.6, stagger: 0.15
+    });
+  }
+</script>
+
+<style>
+  .features-section {
+    background-color: var(--color-surface);
+  }
+  .container-narrow {
+    max-width: 800px;
+  }
+  .text-center {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+  }
+  .feature-card {
+    background: white;
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-sm);
+  }
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--color-surface-alt);
+    color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-3);
+  }
+  .feature-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-2);
+  }
+  .feature-card p {
+    font-size: 0.9375rem;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 992px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,165 @@
+---
+---
+<section class="faq-section">
+  <div class="container container-narrow">
+    <div class="text-center gs-faq-header">
+      <h2>Preguntas Frecuentes</h2>
+      <p>Resolvemos tus dudas antes de empezar.</p>
+    </div>
+    
+    <div class="faq-list gs-faq">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Cuánto tiempo toma la instalación?</span>
+          <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="answer-content">
+            <p>La configuración inicial dura aproximadamente 48 a 72 horas. Nosotros nos encargamos de conectar el WhatsApp, subir tu logo y configurar los horarios de tus mecánicos. Te entregamos todo listo para usar.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Necesito conocimientos técnicos?</span>
+          <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="answer-content">
+            <p>En absoluto. El sistema está diseñado para mecánicos, no para programadores. El panel de gestión es tan fácil de usar como revisar tu correo electrónico, y si tienes dudas, nuestro soporte te ayuda por WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Qué pasa si un cliente escribe fuera de horario?</span>
+          <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="answer-content">
+            <p>El bot atiende 24/7. Si alguien te escribe un domingo a las 3 de la mañana, el bot le mostrará la disponibilidad de la próxima semana y agendará la cita confirmada para cuando el taller esté operativo.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Doy mi número actual al sistema?</span>
+          <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="answer-content">
+            <p>Puedes usar tu número actual (necesitaremos pasarlo a la API oficial) o preferiblemente solicitar un número nuevo exclusivo para reservas, que enviaremos en tu página web y redes sociales. Los datos de tus clientes siempre son 100% tuyos.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>¿Puedo cancelar en cualquier momento?</span>
+          <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="answer-content">
+            <p>Sí, no hay amarres ni contratos a largo plazo. Puedes cancelar tu suscripción mensual cuando lo desees al final de tu ciclo de facturación vigente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".gs-faq-header", {
+      scrollTrigger: { trigger: ".faq-section", start: "top 80%" },
+      y: 30, opacity: 0, duration: 0.8
+    });
+
+    gsap.from(".faq-item", {
+      scrollTrigger: { trigger: ".faq-list", start: "top 80%" },
+      y: 20, opacity: 0, duration: 0.5, stagger: 0.1
+    });
+
+    // Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        // Close all others
+        faqItems.forEach(i => i.classList.remove('active'));
+        // Open clicked one if it wasn't active
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  }
+</script>
+
+<style>
+  .faq-section {
+    background-color: var(--color-surface);
+  }
+  .container-narrow {
+    max-width: 800px;
+  }
+  .text-center {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.3s ease;
+  }
+  .faq-item.active {
+    background-color: white;
+  }
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: var(--space-4) var(--space-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .faq-question .icon {
+    transition: transform 0.3s ease;
+  }
+  .faq-item.active .faq-question .icon {
+    transform: rotate(180deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 300px; /* arbitrary large value for transition */
+  }
+  .answer-content {
+    padding: 0 var(--space-2) var(--space-4);
+  }
+  .answer-content p {
+    margin: 0;
+  }
+</style>

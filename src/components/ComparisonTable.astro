@@ -1,0 +1,144 @@
+---
+---
+<section class="comparison-section">
+  <div class="container container-narrow text-center gs-comp-header">
+    <h2>Diseñado explícitamente para talleres</h2>
+    <p>La diferencia frente a las soluciones genéricas y los sistemas manuales.</p>
+  </div>
+  
+  <div class="container">
+    <div class="table-wrapper gs-table">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Funcionalidad</th>
+            <th class="manual">Hacerlo manual</th>
+            <th class="competitor">Agendapro / Otros</th>
+            <th class="highlight">Futura Nodes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Modelo de cobro</td>
+            <td>Tu tiempo (alto costo)</td>
+            <td>Por cantidad de empleados</td>
+            <td class="highlight strong">Plana, sin límite</td>
+          </tr>
+          <tr>
+            <td class="row-label">Automatización WhatsApp</td>
+            <td><span class="x-mark">✕</span></td>
+            <td>Limitada / Cobro extra</td>
+            <td class="highlight"><span class="check-mark">✓ 100% nativo</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Propiedad de los datos</td>
+            <td><span class="check-mark">✓</span></td>
+            <td>Agendapro</td>
+            <td class="highlight"><span class="check-mark">✓ 100% tuyos</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Landing page propia</td>
+            <td><span class="x-mark">✕</span></td>
+            <td>Perfil en portal</td>
+            <td class="highlight"><span class="check-mark">✓ Sitio web profesional</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Gestión post-servicio</td>
+            <td><span class="x-mark">✕</span></td>
+            <td>General</td>
+            <td class="highlight"><span class="check-mark">✓ Especial para taller</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Soporte técnico</td>
+            <td>N/A</td>
+            <td>Ticket por email</td>
+            <td class="highlight"><span class="check-mark">✓ Directo por WhatsApp</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".gs-comp-header", {
+      scrollTrigger: { trigger: ".comparison-section", start: "top 80%" },
+      y: 30, opacity: 0, duration: 0.8
+    });
+
+    gsap.from(".gs-table", {
+      scrollTrigger: { trigger: ".table-wrapper", start: "top 80%" },
+      y: 30, opacity: 0, duration: 0.8, delay: 0.2
+    });
+  }
+</script>
+
+<style>
+  .comparison-section {
+    background-color: var(--color-bg);
+  }
+  .container-narrow {
+    max-width: 800px;
+  }
+  .text-center {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+  }
+  .comparison-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    background: white;
+    text-align: left;
+  }
+  .comparison-table th, .comparison-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .comparison-table tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-table th {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    background-color: var(--color-surface);
+    font-weight: 700;
+  }
+  .row-label {
+    font-weight: 600;
+    color: var(--color-primary);
+    width: 30%;
+  }
+  .highlight {
+    background-color: var(--color-surface-alt);
+    color: var(--color-primary);
+    position: relative;
+  }
+  .comparison-table th.highlight {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  .highlight.strong {
+    font-weight: 700;
+  }
+  .check-mark {
+    color: var(--color-success);
+    font-weight: 700;
+  }
+  .x-mark {
+    color: #ba1a1a;
+  }
+</style>

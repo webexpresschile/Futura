@@ -1,0 +1,199 @@
+---
+---
+<section class="hero">
+  <div class="container hero-container">
+    <div class="hero-content gs-reveal">
+      <div class="badge">Automatización IA</div>
+      <h1>Tu taller agenda solo.<br>Tú trabajas en lo que importa.</h1>
+      <p>Tus clientes agendan sus horas de servicio a través de WhatsApp de forma automática, 24/7, sin intervención manual ni esperas. Libérate del teléfono y enfócate en el taller.</p>
+      <div class="hero-ctas">
+        <a href="#demo-vivo" class="btn btn-primary gs-btn">Ver demo en vivo</a>
+        <a href="#como-funciona" class="btn btn-secondary gs-btn">Ver cómo funciona</a>
+      </div>
+    </div>
+    
+    <div class="hero-visual gs-reveal-right">
+      <div class="phone-mockup">
+        <div class="phone-speaker"></div>
+        <div class="wa-header">
+          <div class="wa-avatar"></div>
+          <div class="wa-info">
+            <strong>Taller AutoTotal</strong>
+            <span>en línea</span>
+          </div>
+        </div>
+        <div class="wa-chat">
+          <div class="msg client">Hola, necesito agendar una revisión técnica para mi auto.</div>
+          <div class="msg bot">¡Hola! Claro que sí. Soy el asistente de Taller AutoTotal 🚗<br><br>Tenemos disponibilidad:<br>1️⃣ Mañana a las 10:00<br>2️⃣ Mañana a las 15:30<br>3️⃣ Pasado mañana a las 11:00<br><br>Responde con el número de la opción o escribe "otra fecha".</div>
+          <div class="msg client">1</div>
+          <div class="msg bot">¡Perfecto! Tu revisión técnica está agendada para mañana a las 10:00 ✅.<br><br>Te enviaremos un recordatorio 2 horas antes. ¡Nos vemos!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".badge", { opacity: 0, y: 20, duration: 0.6, delay: 0.2 });
+    gsap.from("h1", { opacity: 0, y: 30, duration: 0.8, delay: 0.4 });
+    gsap.from(".hero-content p", { opacity: 0, y: 20, duration: 0.8, delay: 0.6 });
+    gsap.from(".hero-ctas", { opacity: 0, y: 20, duration: 0.8, delay: 0.8 });
+    
+    const messages = gsap.utils.toArray('.msg');
+    gsap.from(messages, {
+      opacity: 0,
+      y: 15,
+      duration: 0.5,
+      stagger: 0.8,
+      delay: 1.2
+    });
+  }
+</script>
+
+<style>
+  .hero {
+    padding-top: 140px;
+    padding-bottom: var(--space-8);
+    background-color: var(--color-surface);
+    overflow: hidden;
+  }
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+  .hero-content {
+    max-width: 600px;
+  }
+  .hero-content h1 {
+    margin: var(--space-4) 0 var(--space-3);
+  }
+  .hero-content p {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-6);
+  }
+  .hero-ctas {
+    display: flex;
+    gap: var(--space-2);
+  }
+  
+  /* Phone Mockup */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .hero-visual::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-surface-alt);
+    border-radius: 50%;
+    z-index: 0;
+    transform: scale(1.1);
+  }
+  .phone-mockup {
+    position: relative;
+    z-index: 1;
+    width: 320px;
+    height: 640px;
+    background: #e5ddd5;
+    border-radius: 40px;
+    border: 12px solid #1a1a1a;
+    box-shadow: var(--shadow-hover);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .phone-speaker {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 25px;
+    background: #1a1a1a;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 10;
+  }
+  .wa-header {
+    background: #075e54;
+    color: white;
+    padding: 35px 15px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .wa-avatar {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .wa-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .wa-info strong {
+    font-size: 1rem;
+    font-family: var(--font-body);
+  }
+  .wa-info span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+  .wa-chat {
+    flex: 1;
+    padding: 20px;
+    background-image: url('data:image/svg+xml,%3Csvg width="10" height="10" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 0h10v10H0z" fill="%23dfd8cf" fill-opacity="0.4"/%3E%3C/svg%3E');
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: hidden;
+  }
+  .msg {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  }
+  .msg.client {
+    background: #fff;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+  }
+  .msg.bot {
+    background: #dcf8c6;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+  }
+
+  @media (max-width: 992px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .hero-content {
+      margin: 0 auto;
+    }
+    .hero-ctas {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 480px) {
+    .hero-ctas {
+      flex-direction: column;
+    }
+  }
+</style>

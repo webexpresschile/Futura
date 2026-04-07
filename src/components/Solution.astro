@@ -1,0 +1,138 @@
+---
+---
+<section class="solution-section">
+  <div class="container container-narrow">
+    <div class="text-center gs-sol-header">
+      <h2>Cómo funciona</h2>
+      <p>Un sistema diseñado para eliminar la carga administrativa</p>
+    </div>
+    
+    <div class="steps-container">
+      <div class="step-line"></div>
+      
+      <div class="step gs-step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>El cliente escribe</h3>
+          <p>Tu cliente envía un mensaje a tu número de WhatsApp preguntando por reservas o servicios.</p>
+        </div>
+      </div>
+      
+      <div class="step gs-step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Sistema inteligente</h3>
+          <p>El bot lee tu calendario, ofrece horarios disponibles y programa la cita confirmada.</p>
+        </div>
+      </div>
+      
+      <div class="step gs-step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Recordatorios automáticos</h3>
+          <p>El sistema envía un mensaje horas antes de la cita para evitar inasistencias.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".gs-sol-header", {
+      scrollTrigger: { trigger: ".solution-section", start: "top 80%" },
+      y: 30, opacity: 0, duration: 0.8
+    });
+
+    gsap.from(".gs-step", {
+      scrollTrigger: { trigger: ".steps-container", start: "top 75%" },
+      y: 30, opacity: 0, duration: 0.6, stagger: 0.3
+    });
+  }
+</script>
+
+<style>
+  .solution-section {
+    background-color: var(--color-bg);
+  }
+  .container-narrow {
+    max-width: 900px;
+  }
+  .text-center {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .step-line {
+    position: absolute;
+    top: 24px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: var(--color-surface-alt);
+    z-index: 0;
+  }
+  .step {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--space-2);
+  }
+  .step-number {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-accent);
+    color: white;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px white, var(--shadow-sm);
+    margin-bottom: var(--space-4);
+  }
+  .step h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-2);
+  }
+  .step p {
+    font-size: 0.9375rem;
+  }
+
+  @media (max-width: 768px) {
+    .steps-container {
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+    .step-line {
+      top: 0;
+      bottom: 0;
+      left: 24px;
+      right: auto;
+      width: 2px;
+      height: 100%;
+    }
+    .step {
+      flex-direction: row;
+      text-align: left;
+      align-items: flex-start;
+      gap: var(--space-4);
+      padding: 0;
+    }
+  }
+</style>

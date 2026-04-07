@@ -1,0 +1,72 @@
+---
+---
+<section class="social-proof">
+  <div class="container">
+    <p class="sp-text">Usado por talleres de vanguardia en Santiago, Providencia, Las Condes y más</p>
+    <div class="marquee-container">
+      <div class="marquee">
+        <!-- Replicating content for continuous scrolling -->
+        <span>Taller Mecánico Titanium</span>
+        <span class="dot">•</span>
+        <span>AutoServicio Pro</span>
+        <span class="dot">•</span>
+        <span>Garage Central</span>
+        <span class="dot">•</span>
+        <span>MotorExperts</span>
+        <span class="dot">•</span>
+        <span>Taller Mecánico Titanium</span>
+        <span class="dot">•</span>
+        <span>AutoServicio Pro</span>
+        <span class="dot">•</span>
+        <span>Garage Central</span>
+        <span class="dot">•</span>
+        <span>MotorExperts</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .social-proof {
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--color-surface-alt);
+    border-bottom: 1px solid var(--color-surface-alt);
+    background-color: var(--color-bg);
+  }
+  .sp-text {
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    width: 100%;
+  }
+  .marquee {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+  }
+  .marquee span {
+    font-size: 1.125rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-primary-light);
+    margin: 0 var(--space-2);
+  }
+  .marquee .dot {
+    color: var(--color-border);
+    font-size: 0.875rem;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
