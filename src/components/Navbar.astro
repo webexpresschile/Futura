@@ -3,7 +3,7 @@
 <header class="navbar" id="navbar">
   <div class="container navbar-inner">
     <div class="logo">
-      <a href="/">FUTURA NODES</a>
+      <a href="/">FUTURA</a>
     </div>
     <nav class="nav-links">
       <a href="#funciones">Funciones</a>
@@ -53,13 +53,19 @@
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 900;
-    color: var(--color-primary);
-    background: var(--color-accent);
     color: white;
+    background: var(--color-primary);
     padding: 0.5rem 1rem;
     border: var(--border-width) solid var(--color-border);
     box-shadow: 3px 3px 0px #000;
     transition: transform 0.2s ease;
+    letter-spacing: -1px;
+  }
+  @media (max-width: 480px) {
+    .logo a {
+      font-size: 1.25rem;
+      padding: 0.4rem 0.8rem;
+    }
   }
   .logo a:hover {
     transform: translate(-2px, -2px);
