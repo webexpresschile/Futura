@@ -4,8 +4,8 @@
   <div class="container hero-container">
     <div class="hero-content gs-reveal">
       <div class="badge">Automatización IA</div>
-      <h1>TU TALLER AGENDA SOLO.</h1>
-      <p>Tus clientes agendan sus horas a través de WhatsApp automáticamente, 24/7, sin esperas. Libérate del teléfono y enfócate en el taller.</p>
+      <h1>TU <span id="dynamic-business" class="text-accent">TALLER</span><br>AGENDA SOLO.</h1>
+      <p>Tus clientes agendan sus horas a través de WhatsApp automáticamente, 24/7, sin esperas. Libérate del teléfono y enfócate en tu negocio.</p>
       <div class="hero-ctas">
         <a href="#demo-vivo" class="btn btn-primary gs-btn">Ver demo en vivo</a>
         <a href="#como-funciona" class="btn btn-secondary gs-btn">Ver cómo funciona</a>
@@ -13,19 +13,19 @@
     </div>
     
     <div class="hero-visual gs-reveal-right">
-      <div class="phone-mockup">
+      <div class="phone-mockup" id="mockup-container">
         <div class="wa-header">
-          <div class="wa-avatar"></div>
+          <div class="wa-avatar" id="mockup-avatar"></div>
           <div class="wa-info">
-            <strong>Taller AutoTotal</strong>
+            <strong id="mockup-contact">Taller AutoTotal</strong>
             <span>en línea</span>
           </div>
         </div>
         <div class="wa-chat">
-          <div class="msg client">Hola, necesito hora para revisión general.</div>
-          <div class="msg bot">¡Hola! Soy el asistente virtual de AutoTotal 🚗<br><br>Horarios disponibles:<br>1️⃣ Mañana 10:00<br>2️⃣ Mañana 15:30<br><br>Responde con el número.</div>
-          <div class="msg client">1</div>
-          <div class="msg bot">¡Perfecto! Agenda confirmada ✅.<br>Te recordaremos 2 horas antes.</div>
+          <div class="msg client" id="msg-client-1">Hola, necesito hora para revisión general.</div>
+          <div class="msg bot" id="msg-bot-1">¡Hola! Soy el asistente virtual de AutoTotal 🚗<br><br>Horarios disponibles:<br>1️⃣ Mañana 10:00<br>2️⃣ Mañana 15:30<br><br>Responde con el número.</div>
+          <div class="msg client" id="msg-client-2">1</div>
+          <div class="msg bot" id="msg-bot-2">¡Perfecto! Agenda confirmada ✅.<br>Te recordaremos 2 horas antes.</div>
         </div>
       </div>
     </div>
@@ -36,6 +36,45 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   
+  const businesses = [
+    {
+      name: "TALLER",
+      contactName: "Taller AutoTotal",
+      avatarColor: "var(--color-accent)",
+      msg1: "Hola, necesito hora para revisión general.",
+      botMsg1: "¡Hola! Soy el asistente virtual de AutoTotal 🚗<br><br>Horarios disponibles:<br>1️⃣ Mañana 10:00<br>2️⃣ Mañana 15:30<br><br>Responde con el número.",
+      msg2: "1",
+      botMsg2: "¡Perfecto! Agenda confirmada ✅.<br>Te recordaremos 2 horas antes."
+    },
+    {
+      name: "BARBERÍA",
+      contactName: "Barbería Classic",
+      avatarColor: "#000000",
+      msg1: "Buenas, tienen hora para un corte y barba hoy?",
+      botMsg1: "¡Hola! Soy el asistente de Barbería Classic 💈<br><br>Horarios de hoy:<br>1️⃣ 16:00 con Diego<br>2️⃣ 18:30 con Felipe<br><br>Responde con el número.",
+      msg2: "2",
+      botMsg2: "¡Listo! Quedas agendado para las 18:30 ✅.<br>Te esperamos."
+    },
+    {
+      name: "SALÓN DE BELLEZA",
+      contactName: "Beauty Studio",
+      avatarColor: "#EC4899",
+      msg1: "Hola, quiero hacerme las uñas",
+      botMsg1: "¡Hola! Asistente de Beauty Studio 💅<br><br>Aquí tienes nuestras opciones:<br>1️⃣ Jueves 10:00<br>2️⃣ Jueves 11:30<br><br>Responde con el número.",
+      msg2: "1",
+      botMsg2: "¡Super! Agendada el Jueves 10:00 ✅.<br>Te llegará un recordatorio."
+    },
+    {
+      name: "CENTRO DE MASAJES",
+      contactName: "Zen Masajes",
+      avatarColor: "#10B981",
+      msg1: "Hola, necesito un masaje descontracturante",
+      botMsg1: "¡Hola! Soy el asistente de Zen Masajes 🌿<br><br>Horarios disponibles:<br>1️⃣ Viernes 17:00<br>2️⃣ Sábado 10:00<br><br>Responde con el número.",
+      msg2: "1",
+      botMsg2: "¡Perfecto! Agenda confirmada para el Viernes ✅.<br>Nos vemos pronto."
+    }
+  ];
+
   if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +83,55 @@
     gsap.from(".hero-content p", { opacity: 0, y: 20, duration: 0.5, delay: 0.3 });
     gsap.from(".hero-ctas", { opacity: 0, y: 20, duration: 0.5, delay: 0.4 });
     gsap.from(".phone-mockup", { opacity: 0, x: 20, duration: 0.5, delay: 0.5 });
+
+    let currentIndex = 0;
+    const dynamicBusiness = document.getElementById('dynamic-business');
+    const mockupAvatar = document.getElementById('mockup-avatar');
+    const mockupContact = document.getElementById('mockup-contact');
+    const msgClient1 = document.getElementById('msg-client-1');
+    const msgBot1 = document.getElementById('msg-bot-1');
+    const msgClient2 = document.getElementById('msg-client-2');
+    const msgBot2 = document.getElementById('msg-bot-2');
+    
+    // The elements to fade out/in
+    const animatedElements = [
+      dynamicBusiness,
+      mockupAvatar,
+      mockupContact,
+      msgClient1,
+      msgBot1,
+      msgClient2,
+      msgBot2
+    ];
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % businesses.length;
+      const nextData = businesses[currentIndex];
+
+      // Fade out slowly
+      gsap.to(animatedElements, {
+        opacity: 0, 
+        duration: 0.8, 
+        ease: "power2.inOut",
+        onComplete: () => {
+          // Change content
+          if (dynamicBusiness) dynamicBusiness.textContent = nextData.name;
+          if (mockupAvatar) mockupAvatar.style.backgroundColor = nextData.avatarColor;
+          if (mockupContact) mockupContact.textContent = nextData.contactName;
+          if (msgClient1) msgClient1.innerHTML = nextData.msg1;
+          if (msgBot1) msgBot1.innerHTML = nextData.botMsg1;
+          if (msgClient2) msgClient2.innerHTML = nextData.msg2;
+          if (msgBot2) msgBot2.innerHTML = nextData.botMsg2;
+
+          // Fade back in slowly
+          gsap.to(animatedElements, {
+            opacity: 1, 
+            duration: 0.8,
+            ease: "power2.inOut"
+          });
+        }
+      });
+    }, 5000); // Wait 5 seconds between changes
   }
 </script>
 
@@ -65,6 +153,10 @@
   .hero-content h1 {
     margin: var(--space-4) 0;
     line-height: 1;
+  }
+  .text-accent {
+    color: var(--color-accent);
+    text-shadow: 3px 3px 0px #000000;
   }
   .hero-content p {
     font-size: 1.25rem;
@@ -129,6 +221,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    min-height: 400px;
   }
   .msg {
     padding: 12px 16px;
