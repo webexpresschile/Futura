@@ -4,8 +4,8 @@
   <div class="container hero-container">
     <div class="hero-content gs-reveal">
       <div class="badge">Automatización IA</div>
-      <h1>TU TALLER AGENDA SOLO.</h1>
-      <p>Tus clientes agendan sus horas a través de WhatsApp automáticamente, 24/7, sin esperas. Libérate del teléfono y enfócate en el taller.</p>
+      <h1 id="dynamic-title">TU TALLER AGENDA SOLO.</h1>
+      <p id="dynamic-desc">Tus clientes agendan sus horas a través de WhatsApp automáticamente, 24/7, sin esperas. Libérate del teléfono y enfócate en tu negocio.</p>
       <div class="hero-ctas">
         <a href="#demo-vivo" class="btn btn-primary gs-btn">Ver demo en vivo</a>
         <a href="#como-funciona" class="btn btn-secondary gs-btn">Ver cómo funciona</a>
@@ -17,11 +17,11 @@
         <div class="wa-header">
           <div class="wa-avatar"></div>
           <div class="wa-info">
-            <strong>Taller AutoTotal</strong>
+            <strong id="dynamic-name">Taller AutoTotal</strong>
             <span>en línea</span>
           </div>
         </div>
-        <div class="wa-chat">
+        <div class="wa-chat" id="dynamic-chat">
           <div class="msg client">Hola, necesito hora para revisión general.</div>
           <div class="msg bot">¡Hola! Soy el asistente virtual de AutoTotal 🚗<br><br>Horarios disponibles:<br>1️⃣ Mañana 10:00<br>2️⃣ Mañana 15:30<br><br>Responde con el número.</div>
           <div class="msg client">1</div>
@@ -44,6 +44,77 @@
     gsap.from(".hero-content p", { opacity: 0, y: 20, duration: 0.5, delay: 0.3 });
     gsap.from(".hero-ctas", { opacity: 0, y: 20, duration: 0.5, delay: 0.4 });
     gsap.from(".phone-mockup", { opacity: 0, x: 20, duration: 0.5, delay: 0.5 });
+
+    // Lógica de rotación de nichos
+    const niches = [
+      {
+        title: "TU TALLER AGENDA SOLO.",
+        desc: "Tus clientes agendan sus horas automáticamente, 24/7. Libérate del teléfono y enfócate en los autos.",
+        name: "Taller AutoTotal",
+        chat: `<div class="msg client">Hola, necesito hora para revisión general.</div>
+               <div class="msg bot">¡Hola! Soy el asistente de AutoTotal 🚗<br><br>Horarios:<br>1️⃣ Mañana 10:00<br>2️⃣ Mañana 15:30<br><br>Responde con el número.</div>
+               <div class="msg client">1</div>
+               <div class="msg bot">¡Agenda confirmada ✅!<br>Te recordaremos 2 horas antes.</div>`
+      },
+      {
+        title: "TU BARBERÍA SE LLENA SOLA.",
+        desc: "Deja de contestar WhatsApp mientras cortas pelo. El bot agenda, confirma y reactiva a tus clientes.",
+        name: "Barbería Elite",
+        chat: `<div class="msg client">¿Tienen espacio para un corte y barba hoy?</div>
+               <div class="msg bot">¡Bienvenido a Barbería Elite! ✂️<br><br>Hoy tenemos:<br>1️⃣ 17:00 (Andrés)<br>2️⃣ 18:30 (Javi)<br><br>¿Con quién te agendo?</div>
+               <div class="msg client">Con Andrés</div>
+               <div class="msg bot">¡Listo! Quedas agendado a las 17:00 con Andrés. 💈</div>`
+      },
+      {
+        title: "TU SALÓN DE BELLEZA BRILLA.",
+        desc: "Automatiza tus citas de uñas, cabello y maquillaje. Tus clientas aman la respuesta inmediata.",
+        name: "Glow Salón",
+        chat: `<div class="msg client">Hola, me quiero hacer las uñas.</div>
+               <div class="msg bot">¡Hola! En Glow Salón te esperamos 💅<br><br>Disponibilidad:<br>1️⃣ Jueves 11:00<br>2️⃣ Viernes 16:00<br><br>Elige una opción.</div>
+               <div class="msg client">El jueves</div>
+               <div class="msg bot">¡Perfecto! Te esperamos el Jueves a las 11:00. ✨</div>`
+      },
+      {
+        title: "TU CENTRO DE MASAJES RELAJA.",
+        desc: "Tus clientes reservan su sesión de relajación sin interrumpir tu paz. Automatización total.",
+        name: "Zen Masajes",
+        chat: `<div class="msg client">Hola, ¿tienen masajes descontracturantes?</div>
+               <div class="msg bot">Sí, en Zen Masajes te ayudamos a relajarte 🌿<br><br>Horarios:<br>1️⃣ Mañana 10:00<br>2️⃣ Pasado mañana 18:00<br><br>¿Cuál prefieres?</div>
+               <div class="msg client">Mañana a las 10</div>
+               <div class="msg bot">¡Excelente elección! Te esperamos mañana a las 10:00. 🧘‍♀️</div>`
+      }
+    ];
+
+    let currentIndex = 0;
+    const titleEl = document.getElementById('dynamic-title');
+    const descEl = document.getElementById('dynamic-desc');
+    const nameEl = document.getElementById('dynamic-name');
+    const chatEl = document.getElementById('dynamic-chat');
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % niches.length;
+      const next = niches[currentIndex];
+
+      // Transición suave con GSAP
+      gsap.to([titleEl, descEl, chatEl], {
+        opacity: 0,
+        y: 10,
+        duration: 0.8,
+        onComplete: () => {
+          titleEl.innerText = next.title;
+          descEl.innerText = next.desc;
+          nameEl.innerText = next.name;
+          chatEl.innerHTML = next.chat;
+          
+          gsap.to([titleEl, descEl, chatEl], {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out"
+          });
+        }
+      });
+    }, 6000); // Cambia cada 6 segundos (transición lenta)
   }
 </script>
 
