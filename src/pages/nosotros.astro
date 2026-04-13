@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Nosotros - Futura Agencia Digital">
+  <Navbar />
+  
+  <div class="page-header text-center">
+    <div class="container">
+      <h1 class="text-gradient">Sobre Futura</h1>
+      <p>Transformamos visiones en realidades digitales.</p>
+    </div>
+  </div>
+  
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content glass">
+        <div class="about-text">
+          <h2 style="color: var(--color-primary); margin-bottom: 1.5rem;">Nuestra Misión</h2>
+          <p>En Futura Agencia Digital, creemos que la tecnología debe ser el principal aliado de tu negocio, no un dolor de cabeza. Nacimos con la misión de democratizar el acceso a soluciones digitales de alta calidad, desde sitios web ultra-rápidos hasta sistemas automatizados con Inteligencia Artificial.</p>
+          <p>No somos solo proveedores; somos tus socios tecnológicos estratégicos. Nos involucramos en tus procesos para entender exactamente qué necesitas para vender más, atender mejor a tus clientes y ahorrar tiempo valioso.</p>
+          
+          <h2 style="color: var(--color-secondary); margin-bottom: 1.5rem; margin-top: 3rem;">Por qué elegirnos</h2>
+          <ul class="benefits">
+            <li>
+              <strong>Enfoque en ROI:</strong> Cada diseño y línea de código está pensada para generar retorno de inversión.
+            </li>
+            <li>
+              <strong>Tecnología de Punta:</strong> Usamos frameworks modernos (como Astro) para asegurar la máxima velocidad.
+            </li>
+            <li>
+              <strong>Transparencia:</strong> Comunicación clara en todas las etapas del proyecto. No hay costos ocultos.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    padding: 180px 0 80px 0;
+    background-color: var(--color-bg-light);
+  }
+  
+  .page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-section {
+    padding: var(--space-8) 0;
+    position: relative;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: var(--radius-lg);
+    background: white;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefits {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .benefits li {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+  }
+  
+  .benefits li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+  }
+  
+  .benefits strong {
+    color: var(--color-dark);
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 2rem;
+    }
+  }
+</style>

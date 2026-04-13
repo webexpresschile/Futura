@@ -2,36 +2,48 @@
 ---
 <section class="testimonials-section">
   <div class="container">
-    <h2 class="section-title">LO QUE DICEN NUESTROS SOCIOS</h2>
+    <div class="section-header text-center mb-4">
+      <h2 class="text-gradient">Lo que dicen nuestros clientes</h2>
+      <p>Empresas que han transformado su presencia digital con nosotros.</p>
+    </div>
     
-    <div class="testimonial-grid">
-      <!-- Testimonio 1: Taller (El que ya tenías) -->
-      <div class="brutalist-card testimonial-card">
+    <div class="testimonial-grid mt-4">
+      <!-- Testimonio 1 -->
+      <div class="modern-card testimonial-card">
         <div class="quote-icon">"</div>
-        <p class="quote-text">"Perdía 4 clientes por semana por no responder cuando estaba debajo del auto. Hoy, el taller se llena solo."</p>
+        <p class="quote-text">El rediseño de nuestra tienda online no solo mejoró la estética, sino que las ventas aumentaron un 150% en el primer mes. Un equipo muy profesional.</p>
         <div class="author">
-          <div class="author-name">ROBERTO CÁRDENAS</div>
-          <div class="author-role">DUEÑO SERVITECA R&C</div>
+          <div class="author-avatar" style="background-color: var(--color-primary); color: white;">RC</div>
+          <div class="author-info">
+            <div class="author-name">Roberto Cárdenas</div>
+            <div class="author-role">Fundador, EcoTech</div>
+          </div>
         </div>
       </div>
 
-      <!-- Testimonio 2: Barbería (Nuevo) -->
-      <div class="brutalist-card testimonial-card">
+      <!-- Testimonio 2 -->
+      <div class="modern-card testimonial-card">
         <div class="quote-icon">"</div>
-        <p class="quote-text">"Antes pasaba el día cortando pelo y contestando WhatsApp al mismo tiempo. Ahora el bot me agenda las citas y yo solo me preocupo de cortar."</p>
+        <p class="quote-text">El asistente de IA que integraron en nuestro sitio nos ahorra horas de atención al cliente todos los días. La mejor inversión que hemos hecho en tecnología.</p>
         <div class="author">
-          <div class="author-name">JAVIER TORRES</div>
-          <div class="author-role">BARBERÍA EL CABALLERO</div>
+          <div class="author-avatar" style="background-color: var(--color-secondary); color: white;">JT</div>
+          <div class="author-info">
+            <div class="author-name">Javier Torres</div>
+            <div class="author-role">CEO, LogisPro</div>
+          </div>
         </div>
       </div>
 
-      <!-- Testimonio 3: Clínica Dental (Nuevo) -->
-      <div class="brutalist-card testimonial-card">
+      <!-- Testimonio 3 -->
+      <div class="modern-card testimonial-card">
         <div class="quote-icon">"</div>
-        <p class="quote-text">"El ausentismo de pacientes bajó al mínimo desde que Futura envía los recordatorios automáticos. Lo mejor es que la base de datos es mía y no de una app externa."</p>
+        <p class="quote-text">Necesitábamos una landing page urgente para un lanzamiento. Cumplieron antes de plazo y con un diseño que nos generó una conversión altísima.</p>
         <div class="author">
-          <div class="author-name">DRA. CAMILA SOTO</div>
-          <div class="author-role">CLÍNICA DENTAL SOTO</div>
+          <div class="author-avatar" style="background-color: var(--color-dark); color: white;">CS</div>
+          <div class="author-info">
+            <div class="author-name">Camila Soto</div>
+            <div class="author-role">Directora de Marketing, Vento</div>
+          </div>
         </div>
       </div>
     </div>
@@ -39,63 +51,84 @@
 </section>
 
 <style>
-  .testimonials-section {
-    padding: var(--space-8) 0;
-    background-color: var(--color-bg);
+  .section-header p {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
   }
-  .section-title {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: var(--space-8);
-    color: var(--color-primary);
-  }
+  
   .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
   }
-  .testimonial-card {
-    padding: var(--space-6);
+  
+  .modern-card {
+    background: var(--color-bg);
+    border-radius: var(--radius-md);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
     position: relative;
-    background: white;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
-  .testimonial-card:hover {
-    transform: translate(-4px, -4px);
-    box-shadow: 8px 8px 0px #000;
+  
+  .modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
   }
+  
   .quote-icon {
     position: absolute;
     top: 1rem;
-    left: 1rem;
-    font-size: 4rem;
+    right: 2rem;
+    font-size: 6rem;
     font-family: serif;
-    color: var(--color-accent);
+    color: var(--color-primary);
     line-height: 1;
-    opacity: 0.2;
+    opacity: 0.1;
   }
+  
   .quote-text {
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: var(--space-4);
+    flex-grow: 1;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--color-text);
+    margin-bottom: 2rem;
     position: relative;
     z-index: 1;
   }
+  
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
   .author-name {
     font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 1.125rem;
-    color: var(--color-primary);
-    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-dark);
   }
+  
   .author-role {
     font-size: 0.875rem;
-    font-weight: 700;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--color-text-muted);
   }
 </style>

@@ -1,38 +1,213 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Testimonials from '../components/Testimonials.astro';
 ---
 
-<Layout title="Bienvenido a Futura">
-  <div style="text-align: center; padding: 4rem 0;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">🐮 Bienvenido a Futura</h1>
-    <p style="font-size: 1.25rem; color: #666; margin-bottom: 2rem;">
-      Plataforma digital para impulsar tu negocio.
-    </p>
-    
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="/blog" style="background: #0066cc; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">
-        �M Blog
-      </a>
-      <a href="/about" style="background: #f5f5f5; color: #333; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">
-        ╠ Nosotros
-      </a>
+<Layout title="Futura Agencia Digital - Diseño Web & IA">
+  <Navbar />
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg glass phase"></div>
+    <div class="container hero-content">
+      <h1 class="bounce-in">Impulsamos tu negocio al <span class="text-gradient">siguiente nivel</span></h1>
+      <p class="fade-in">Diseño web de alto rendimiento, automatización con Inteligencia Artificial e e-commerce profesional. Todo para que vendas más.</p>
+      <div class="hero-actions fade-in-up">
+        <a href="/servicios" class="btn btn-primary">Ver Servicios</a>
+        <a href="/contacto" class="btn btn-secondary">Hablar con un experto</a>
+      </div>
     </div>
-    
-    <div style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-      <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">último artículo </h2>
-      <article style="border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.5rem; text-align: left;">
-        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
-          <a href="/blog/tendencias-marketing-digital-2026" style="color: #0066cc; text-decoration: none;">
-            Tendencias de Marketing Digital 2026
-          </a>
-        </h3>
-        <p style="color: #666; font-size: 0.875rem; margin-bottom: 1rem;">
-          Renata • 15 de Abril, 2026
-        </p>
-        <p style="color: #555; line-height: 1.6;">
-          Descubre las 5 tendencias de marketing digital que están definiendo 2026: IA, video corto, micro-influencers, SEO semántico y automatización.
-        </p>
-      </article>
+  </section>
+  
+  <!-- Servicios Principales -->
+  <section class="services-section" id="servicios">
+    <div class="container">
+      <div class="section-header text-center mb-4">
+        <h2 style="margin-bottom: 0.5rem">Lo que hacemos mejor</h2>
+        <p>Soluciones digitales integrales diseñadas para retorno de inversión.</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <div class="service-card">
+          <div class="service-icon" style="background: rgba(0, 102, 204, 0.1); color: var(--color-primary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <h3 style="font-size: 1.5rem;">Diseño Web</h3>
+          <p>Sitios web modernos, responsivos y súper rápidos optimizados para SEO y conversión.</p>
+          <a href="/servicios#diseno-web" class="service-link">Saber más &rarr;</a>
+        </div>
+        
+        <!-- Servicio 2 -->
+        <div class="service-card">
+          <div class="service-icon" style="background: rgba(0, 212, 170, 0.1); color: var(--color-secondary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <h3 style="font-size: 1.5rem;">Sistemas con IA</h3>
+          <p>Automatizamos procesos e interacciones con chatbots y agentes conversacionales.</p>
+          <a href="/servicios#ia" class="service-link">Saber más &rarr;</a>
+        </div>
+        
+        <!-- Servicio 3 -->
+        <div class="service-card">
+          <div class="service-icon" style="background: rgba(26, 26, 46, 0.1); color: var(--color-dark);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </div>
+          <h3 style="font-size: 1.5rem;">Tienda Nube</h3>
+          <p>Tu e-commerce configurado de principio a fin, listo para empezar a vender.</p>
+          <a href="/servicios#ecommerce" class="service-link">Saber más &rarr;</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  
+  <Testimonials />
+  
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2 style="color: white; margin-bottom: 1.5rem;">¿Listo para digitalizar tu negocio con éxito?</h2>
+      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem auto;">Agenda una llamada gratuita de 15 minutos para entender tus objetivos y ver cómo podemos ayudarte.</p>
+      <a href="/contacto" class="btn btn-secondary" style="font-size: 1.25rem; padding: 1rem 2.5rem; color: var(--color-primary); border: none;">Contactar Ahora</a>
+    </div>
+  </section>
+  
+  <Footer />
 </Layout>
+
+<style>
+  .hero {
+    position: relative;
+    padding: 160px 0 100px 0;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 102, 204, 0.08) 0%, rgba(0, 212, 170, 0.05) 30%, rgba(255,255,255,0) 60%);
+    z-index: -1;
+    animation: rotate 60s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Services */
+  .services-section {
+    background-color: var(--color-bg-light);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .service-card {
+    background: var(--color-bg);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .service-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .service-link:hover {
+    color: var(--color-primary-hover);
+    transform: translateX(5px);
+  }
+  
+  /* CTA */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #004d99 100%);
+    padding: 6rem 0;
+    margin-top: auto;
+  }
+  
+  /* Animations */
+  .bounce-in {
+    animation: bounceIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  @keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 120px 0 60px 0;
+    }
+  }
+</style>

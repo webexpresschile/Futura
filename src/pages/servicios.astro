@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Servicios - Futura Agencia Digital">
+  <Navbar />
+  
+  <div class="page-header text-center">
+    <div class="container">
+      <h1 class="text-gradient">Nuestros Servicios</h1>
+      <p>Soluciones a medida para potenciar tu presencia y ventas online.</p>
+    </div>
+  </div>
+  
+  <section id="diseno-web" class="service-detail">
+    <div class="container">
+      <div class="service-split">
+        <div class="service-text">
+          <h2 style="color: var(--color-primary)">Diseño Web Orientado a Conversión</h2>
+          <p>Creamos sitios web modernos, rápidos y optimizados para convertir visitantes en clientes. Desde landing pages hasta sitios corporativos completos, diseñados bajo el concepto mobile-first.</p>
+          <ul class="feature-list">
+            <li>✓ Diseño 100% responsivo y adaptativo</li>
+            <li>✓ Optimización SEO técnica y semántica</li>
+            <li>✓ Velocidad de carga super-optimizada</li>
+            <li>✓ Integración nativa con Analytics y Pixels</li>
+          </ul>
+        </div>
+        <div class="service-visual glass rounded-xl">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            </div>
+            <div class="mockup-body" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+              <div class="wireframe"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="ia" class="service-detail" style="background-color: var(--color-bg-light)">
+    <div class="container">
+      <div class="service-split reverse">
+        <div class="service-text">
+          <h2 style="color: var(--color-secondary)">Sistemas con IA y Automatización</h2>
+          <p>Implementamos soluciones de Inteligencia Artificial que automatizan procesos repetitivos, mejoran la atención al cliente 24/7 y optimizan tus operaciones diarias.</p>
+          <ul class="feature-list">
+            <li>✓ Chatbots inteligentes (WhatsApp, Web, RRSS)</li>
+            <li>✓ Automatización de flujos de marketing</li>
+            <li>✓ Embudos de venta automatizados y calificación de leads</li>
+            <li>✓ Agentes IA con base de conocimientos de tu empresa</li>
+          </ul>
+        </div>
+        <div class="service-visual glass rounded-xl">
+           <div class="mockup-window">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="mockup-body" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
+              <div class="chat-bubble left">Hola, ¿en qué te ayudo?</div>
+              <div class="chat-bubble right">Quiero agendar Demo</div>
+              <div class="chat-bubble left">¡Claro! Procesando...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="ecommerce" class="service-detail">
+    <div class="container">
+      <div class="service-split">
+        <div class="service-text">
+          <h2 style="color: var(--color-dark)">Desarrollo en Tienda Nube</h2>
+          <p>Tu tienda profesional lista para vender. Nos encargamos de toda la configuración, diseño personalizado y de implementar las herramientas fundamentales que tu negocio necesita.</p>
+          <ul class="feature-list">
+            <li>✓ Setup completo y configuración de T&C</li>
+            <li>✓ Diseño adaptado a tu manual de marca</li>
+            <li>✓ Integración de pasarelas de pago y logística</li>
+            <li>✓ Capacitación para la administración de la tienda</li>
+          </ul>
+        </div>
+        <div class="service-visual glass rounded-xl">
+           <div class="mockup-window">
+            <div class="mockup-header">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="mockup-body" style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);">
+              <div class="store-grid">
+                <div class="store-item"></div><div class="store-item"></div>
+                <div class="store-item"></div><div class="store-item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" style="background: var(--color-primary); padding: 5rem 0;">
+    <div class="container text-center">
+      <h2 style="color: white">¿Iniciamos tu proyecto?</h2>
+      <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Contáctanos para revisar cuál de estos servicios es el mejor para tu etapa actual.</p>
+      <a href="/contacto" class="btn" style="background: white; color: var(--color-primary)">Empezar ahora</a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .page-header {
+    padding: 180px 0 80px 0;
+    background-color: var(--color-bg-light);
+  }
+  
+  .page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-detail {
+    padding: var(--space-8) 0;
+  }
+  
+  .service-split {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .service-split.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .service-text {
+    flex: 1;
+  }
+  
+  .service-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-text-muted);
+  }
+  
+  .service-visual {
+    flex: 1;
+    min-height: 400px;
+    background: #f1f5f9;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .mockup-window {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  
+  .mockup-header {
+    background: #e2e8f0;
+    padding: 0.75rem 1rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #cbd5e1;
+  }
+  .dot.red { background: #ef4444; }
+  .dot.yellow { background: #eab308; }
+  .dot.green { background: #22c55e; }
+  
+  .mockup-body {
+    height: 250px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .wireframe {
+    width: 80%;
+    height: 20px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .chat-bubble {
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    max-width: 80%;
+  }
+  
+  .chat-bubble.left {
+    background: white;
+    align-self: flex-start;
+  }
+  
+  .chat-bubble.right {
+    background: var(--color-primary);
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .store-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .store-item {
+    background: white;
+    height: 80px;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 900px) {
+    .service-split, .service-split.reverse {
+      flex-direction: column;
+    }
+  }
+</style>
