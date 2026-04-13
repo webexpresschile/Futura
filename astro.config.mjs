@@ -1,10 +1,9 @@
 import { defineConfig } from 'astro/config';
-import { staticSiteMap } from '@asto/sitemap';
 
-// Https://astro.build/reference/configuration-reference/
+// https://astro.build/config
 export default defineConfig({
-  site: 'https://webexpresschile.github.io/Futura/',
-  initegrations: [],
+  site: 'https://webexpresschile.github.io',
+  base: '/Futura',
   output: 'static',
-  trailingSlash: 'always,
+  trailingSlash: 'always',
 });
