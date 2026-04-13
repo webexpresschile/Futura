@@ -2,37 +2,116 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
-
-// This is a minimal blog index that won't break if content is missing
-// The repository seems to have some broken mdx files, we provide a placeholder
 ---
 
 <Layout title="Blog - Futura Nodes">
   <Navbar />
   
-  <div class="page-header text-center" style="padding: 180px 0 80px 0; background-color: var(--color-bg-light);">
-    <div class="container">
-      <h1 class="text-gradient" style="font-size: 3.5rem; margin-bottom: 1rem;">Nuestro Blog</h1>
-      <p style="font-size: 1.25rem;">Artículos, tendencias y recursos sobre marketing, diseño y tecnología.</p>
+  <section class="page-hero">
+    <div class="container text-center">
+      <h1>Blog</h1>
+      <p class="subtitle">Articulos, tutoriales y tendencias de marketing digital.</p>
     </div>
-  </div>
+  </section>
   
-  <section class="blog-list" style="padding: 5rem 0; min-height: 50vh;">
-    <div class="container" style="max-width: 900px;">
-      
-      <article class="blog-card" style="background: white; border-radius: var(--radius-md); padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05); transition: transform 0.3s ease;">
-        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">
-          <a href="/blog/tendencias-marketing-digital-2026" style="color: var(--color-dark);">Tendencias de Marketing Digital 2026</a>
-        </h2>
-        <div style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">
-          Renata • 15 de Abril, 2026
-        </div>
-        <p style="color: var(--color-text); margin-bottom: 1.5rem;">Descubre las 5 tendencias de marketing digital que están definiendo 2026: IA, video corto, micro-influencers, SEO semántico y automatización.</p>
-        <a href="/blog/tendencias-marketing-digital-2026" style="color: var(--color-primary); font-weight: 600;">Leer artículo &rarr;</a>
-      </article>
-
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-grid">
+        <!-- Articulo 1 -->
+        <article class="blog-card">
+          <h3>Tendencias de Marketing Digital 2026</h3>
+          <p class="blog-excerpt">Descubre las 5 tendencias de marketing digital que estan definiendo 2026: IA, video corto, micro-influencers, SEO semantico y automatizacion.</p>
+          <span class="blog-meta">Renata - 15 de Abril, 2026</span>
+          <a href="/blog/tendencias-marketing-digital-2026" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Leer mas</a>
+        </article>
+        
+        <!-- Articulo 2 -->
+        <article class="blog-card">
+          <h3>Como la IA transforma la atencion al cliente</h3>
+          <p class="blog-excerpt">Descubre como los agentes de inteligencia artificial pueden automatizar la atencion al cliente y mejorar la experiencia de usuario.</p>
+          <span class="blog-meta">Dante - 20 de Abril, 2026</span>
+          <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Proximamente</a>
+        </article>
+        
+        <!-- Articulo 3 -->
+        <article class="blog-card">
+          <h3>5 Claves para una Tienda Online Exitosa</h3>
+          <p class="blog-excerpt">Consejos practicos para optimizar tu tienda en linea, mejorar la conversion y aumentar tus ventas.</p>
+          <span class="blog-meta">Emilia - 25 de Abril, 2026</span>
+          <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Proximamente</a>
+        </article>
+      </div>
     </div>
   </section>
   
   <Footer />
 </Layout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #F8F9FA 0%, #F0F5FF 50%, #E6F4F5 100%);
+    padding: 160px 0 60px 0;
+  }
+  
+  .page-hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .blog-section {
+    padding: 6rem 0;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .blog-card {
+    background: var(--color-bg);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .blog-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+  }
+  
+  .blog-excerpt {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-meta {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
