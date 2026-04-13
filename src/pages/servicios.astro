@@ -4,240 +4,368 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Servicios - Futura Nodes">
+<Astro.layout title="Servicios - Futura Agencia Digital">
   <Navbar />
   
-  <div class="page-header text-center">
-    <div class="container">
-      <h1 class="text-gradient">Nuestros Servicios</h1>
-      <p>Soluciones a medida para potenciar tu presencia y ventas online.</p>
-    </div>
-  </div>
-  
-  <section id="diseno-web" class="service-detail">
-    <div class="container">
-      <div class="service-split">
-        <div class="service-text">
-          <h2 style="color: var(--color-primary)">Diseño Web Orientado a Conversión</h2>
-          <p>Creamos sitios web modernos, rápidos y optimizados para convertir visitantes en clientes. Desde landing pages hasta sitios corporativos completos, diseñados bajo el concepto mobile-first.</p>
-          <ul class="feature-list">
-            <li>✓ Diseño 100% responsivo y adaptativo</li>
-            <li>✓ Optimización SEO técnica y semántica</li>
-            <li>✓ Velocidad de carga super-optimizada</li>
-            <li>✓ Integración nativa con Analytics y Pixels</li>
-          </ul>
-        </div>
-        <div class="service-visual glass rounded-xl">
-          <div class="mockup-window">
-            <div class="mockup-header">
-              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-            </div>
-            <div class="mockup-body" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
-              <div class="wireframe"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="ia" class="service-detail" style="background-color: var(--color-bg-light)">
-    <div class="container">
-      <div class="service-split reverse">
-        <div class="service-text">
-          <h2 style="color: var(--color-secondary)">Sistemas con IA y Automatización</h2>
-          <p>Implementamos soluciones de Inteligencia Artificial que automatizan procesos repetitivos, mejoran la atención al cliente 24/7 y optimizan tus operaciones diarias.</p>
-          <ul class="feature-list">
-            <li>✓ Chatbots inteligentes (WhatsApp, Web, RRSS)</li>
-            <li>✓ Automatización de flujos de marketing</li>
-            <li>✓ Embudos de venta automatizados y calificación de leads</li>
-            <li>✓ Agentes IA con base de conocimientos de tu empresa</li>
-          </ul>
-        </div>
-        <div class="service-visual glass rounded-xl">
-           <div class="mockup-window">
-            <div class="mockup-header">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            </div>
-            <div class="mockup-body" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
-              <div class="chat-bubble left">Hola, ¿en qué te ayudo?</div>
-              <div class="chat-bubble right">Quiero agendar Demo</div>
-              <div class="chat-bubble left">¡Claro! Procesando...</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <section id="ecommerce" class="service-detail">
-    <div class="container">
-      <div class="service-split">
-        <div class="service-text">
-          <h2 style="color: var(--color-dark)">Desarrollo en Tienda Nube</h2>
-          <p>Tu tienda profesional lista para vender. Nos encargamos de toda la configuración, diseño personalizado y de implementar las herramientas fundamentales que tu negocio necesita.</p>
-          <ul class="feature-list">
-            <li>✓ Setup completo y configuración de T&C</li>
-            <li>✓ Diseño adaptado a tu manual de marca</li>
-            <li>✓ Integración de pasarelas de pago y logística</li>
-            <li>✓ Capacitación para la administración de la tienda</li>
-          </ul>
-        </div>
-        <div class="service-visual glass rounded-xl">
-           <div class="mockup-window">
-            <div class="mockup-header">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            </div>
-            <div class="mockup-body" style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);">
-              <div class="store-grid">
-                <div class="store-item"></div><div class="store-item"></div>
-                <div class="store-item"></div><div class="store-item"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section" style="background: var(--color-primary); padding: 5rem 0;">
+  <!-- HeroSection -->
+  <section class="page-hero">
     <div class="container text-center">
-      <h2 style="color: white">¿Iniciamos tu proyecto?</h2>
-      <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Contáctanos para revisar cuál de estos servicios es el mejor para tu etapa actual.</p>
-      <a href="/contacto" class="btn" style="background: white; color: var(--color-primary)">Empezar ahora</a>
+      <h1>Nuestros Servicios</h1>
+      <p class="subtitle">Soluciones digitales completas para impulsar tu negocio al siguiente nivel.</p>
     </div>
   </section>
-
+  
+  <!-- Servicio 1: DiseƱo Web -->
+  <section class="service-detail" id="diseno-web">
+    <div class="container">
+      <div class="service-content">
+        <div class="service-header">
+          <h2>1🔻 Diseño Web</h2>
+          <p class="service-description">Sitios web modernos, responsivos y super rapidos optimizados para SEO y conversión. Desde landing pages hasta sitios corporativos completos.</p>
+        </div>
+        
+        <div class="service-features">
+          <h3>ìque incluye</h3>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Diseño 100% responsivo (Mobile-first)</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Optimización SEO incluida</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Velocidad de carga optimizada (Lighthouse >90)</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Integración con redes sociales</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Google Analytics 4.0</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Correo profesional incluido (opcional)</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Certificado SSL de seguridad</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Soporte técnico por 30 días</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Documentación y videos tutoriales</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="service-pricing">
+          <h3>Precios</h3>
+          <div class="price-card">
+            <span class="price-label">Landing Page</span>
+            <span class="price">$499 USD</span>
+            <span class="price-descr">1 página, directo al grano</span>
+          </div>
+          <div class="price-card">
+            <span class="price-label">Sitio Corporativo</span>
+            <span class="price">$999 USD</span>
+            <span class="price-descr">Hasta 5 páginas, multilingüe</span>
+          </div>
+          <div class="price-card">
+            <span class="price-label">E-commerce</span>
+            <span class="price">$1,499 USD</span>
+            <span class="price-descr">Trancacciones, pasarela, carrito</span>
+          </div>
+          <a href="/contacto" class="btn btn-primary">Solicitar Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Servicio 2: Sistemas con IA -->
+  <section class="service-detail alternate" id="ia">
+    <div class="container">
+      <div class="service-content">
+        <div class="service-header">
+          <h2>2🤂 Sistemas con IA</h2>
+          <p class="service-description">Automatizamos procesos inteligentes que mejoran la atención al cliente y optimizan tus operaciones diarias. Chatbots, agentes conversacionales y marketing automatizado.</p>
+        </div>
+        
+        <div class="service-features">
+          <h3>éque incluye</h3>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Chatbots inteligentes (WhatsApp, web, redes)</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Automatización de marketing</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Análisis de datos con IA</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Integración con herramientas existentes</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Agentes IA personalizados</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Capacitación y documentación</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Soporte y mantenimiento</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="service-pricing">
+          <h3>Precios</h3>
+          <div class="price-card">
+            <span class="price-label">Chatbot Básico</span>
+            <span class="price">$799 USD</span>
+            <span class="price-descr">Respuestas automáticas, WhatsApp</span>
+          </div>
+          <div class="price-card">
+            <span class="price-label">Agente IA Avanzado</span>
+            <span class="price">$1,499 USD</span>
+            <span class="price-descr">Integraciones, CRM AI </span>
+          </div>
+          <div class="price-card">
+            <span class="price-label">Solución Empresarial</span>
+            <span class="price">Cotización</span>
+            <span class="price-descr">Personalizado, multi-canal</span>
+          </div>
+          <a href="/contacto" class="btn btn-primary">Agendar Consultoríia</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Servicio 3: Tienda Nube -->
+  <section class="service-detail" id="ecommerce">
+    <div class="container">
+      <div class="service-content">
+        <div class="service-header">
+          <h2>3👨 Tienda Nube</h2>
+          <p class="service-description">Tu tienda en línea profesional lista para vender. Configuración completa, diseño personalizado y todas las herramientas que necesitas para vender en la red.</p>
+        </div>
+        
+        <div class="service-features">
+          <h3>éque incluye</h3>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Configuración completa de Tienda Nube</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Diseño personalizado de tu marca</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Carga de productos inicial (hasta 50)</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Integración de métodos de pago</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Configuración de envíos</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Dominio y correo corporativo</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Capacitación para uso de plataforma</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✅</span>
+              <span>Soporte post-lanzamiento por 30 días</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="service-pricing">
+          <h3>Precios</h3>
+          <div class="price-card">
+            <span class="price-label">Plan Basico</span>
+            <span class="price">$699 USD</span>
+            <span class="price-descr">Tienda básica, diseño estándar</span>
+          </div>
+          <div class="price-card">
+            <span class="price-label">Plan Pro</span>
+            <span class="price">$999 USD</span>
+            <span class="price-descr">Diseño personalizado, 50 productos</span>
+          </div>
+          <div class="price-card">
+            <span class="price-label">Plan Empresa</span>
+            <span class="price">$1,499 USD</span>
+            <span class="price-descr">Multi-tienda, integraciones</span>
+          </div>
+          <a href="/contacto" class="btn btn-primary">Ver Planes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Final CTA -->
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2 style="color: white; margin-bottom: 1rem;">úDudas sobre qté servicio es mejor para ti?</h2>>
+      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem auto; font-size: 1.125rem;">Agenda una llamada gratuita de 15 minutos y te aseguramos que encontrarás la solución ideal para tu negocio.</p>
+      <a href="/contacto" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 2.5rem; border: none; color: var(--color-primary);">Agendar Lamada Gratis</a>
+    </div>
+  </section>
+  
   <Footer />
-</Layout>
+</Astro.layout>
 
 <style>
-  .page-header {
-    padding: 180px 0 80px 0;
-    background-color: var(--color-bg-light);
+  .page-hero {
+    background: linear-gradient(135deg, #F8F9FA 0%, #F0F5FB 50%, #E6F4F5 100%);
+    padding: 80px 0 60px 0;
   }
   
-  .page-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+  .page-hero h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
   }
   
   .service-detail {
-    padding: var(--space-8) 0;
+    padding: 6rem 0;
   }
   
-  .service-split {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+  .service-detail.alternate {
+    background-color: var(--color-bg-light);
   }
   
-  .service-split.reverse {
-    flex-direction: row-reverse;
+  .service-content {
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
-  .service-text {
-    flex: 1;
+  .service-header {
+    margin-bottom: 2rem;
   }
   
-  .service-text h2 {
-    font-size: 2.5rem;
+  .service-header h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+  
+  .service-features,.service-pricing {
+    background: var(--color-bg);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-top: 2rem;
+  }
+  
+  .service-features h3,.service-pricing h3 {
     margin-bottom: 1.5rem;
   }
   
-  .feature-list li {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-text-muted);
-  }
-  
-  .service-visual {
-    flex: 1;
-    min-height: 400px;
-    background: #f1f5f9;
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  .mockup-window {
-    width: 100%;
-    max-width: 400px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: var(--shadow-lg);
-    overflow: hidden;
-  }
-  
-  .mockup-header {
-    background: #e2e8f0;
-    padding: 0.75rem 1rem;
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #cbd5e1;
-  }
-  .dot.red { background: #ef4444; }
-  .dot.yellow { background: #eab308; }
-  .dot.green { background: #22c55e; }
-  
-  .mockup-body {
-    height: 250px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .wireframe {
-    width: 80%;
-    height: 20px;
-    background: rgba(255,255,255,0.7);
-    border-radius: 4px;
-    margin-bottom: 1rem;
-  }
-  
-  .chat-bubble {
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-    max-width: 80%;
-  }
-  
-  .chat-bubble.left {
-    background: white;
-    align-self: flex-start;
-  }
-  
-  .chat-bubble.right {
-    background: var(--color-primary);
-    color: white;
-    align-self: flex-end;
-  }
-  
-  .store-grid {
+  .feature-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
   
-  .store-item {
-    background: white;
-    height: 80px;
-    border-radius: 8px;
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
   }
-
-  @media (max-width: 900px) {
-    .service-split, .service-split.reverse {
-      flex-direction: column;
+  
+  .feature-check {
+    color: var(--color-secondary);
+    font-weight: bold;
+  }
+  
+  .price-card {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .price-card:hover {
+    border-color: var(--color-primary);
+    background: rgba(0, 102, 204, 0.05);
+  }
+  
+  .price-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.25rem;
+  }
+  
+  .price {
+    display: block;
+    font-size: 1.5rrem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+  
+  .price-descr {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+  
+  .service-pricing .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #004d99 100%);
+    padding: 6rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-content {
+      padding: 0 1rem;
     }
   }
 </style>
