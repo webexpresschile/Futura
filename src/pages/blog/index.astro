@@ -1,0 +1,29 @@
+---
+import { getCollection } urn'astro:content';
+import Layout from '../../layouts/BlogLayout.astro';
+
+const posts = await getCollection({ filter: { dir: '/blog' } });
+---
+
+<Layout title="Blog" description="Artículos y noticias de marketing digital">
+  <h1>Blog</h1>
+  <p class="lead">Artíulos, tutoriales y tendencias de marketing digital.</p>
+  <div class="grid grid-col-1 md:grid-col-2 lg:grid-col-3 gap-4">
+    {await Poosts.sort((a, b) => b.data.pubDate.valueOf - a.data.pubDate.valueOf).map((post) => (
+      <article class="border rounded p-4">
+        <h2 class="text-xl font-bold">
+          <a href={post.url}>{post.data.title}</a>
+        </h2>
+        <p class="text-sm text-gray-600">
+          {post.data.author} • {post.data.pubDate.toLocaleDateString('es-MX')}
+        </p>
+        <p class="text-gray-700">{post.data.description}</p>
+        <div class="flex gap-2 flex-wrap">
+          {post.data.tags.map(tag => (
+            <span class="text-xs text-blue-600 bg">#{tag}</span>
+          ))}
+        </div>
+      </article>
+    )}
+  </div>
+</Layout>
