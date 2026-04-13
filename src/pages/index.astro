@@ -1,34 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import SocialProof from '../components/SocialProof.astro';
-import ProblemSection from '../components/ProblemSection.astro';
-import Solution from '../components/Solution.astro';
-import FeaturesGrid from '../components/FeaturesGrid.astro';
-import ComparisonTable from '../components/ComparisonTable.astro';
-import Pricing from '../components/Pricing.astro';
-import Testimonial from '../components/Testimonial.astro';
-import Testimonials from '../components/Testimonials.astro';
-import FAQ from '../components/FAQ.astro';
-import FinalCTA from '../components/FinalCTA.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Futura Nodes - Automatización de WhatsApp">
-  <Navbar />
-  <main>
-    <Hero />
-    <SocialProof />
-    <ProblemSection />
-    <Solution />
-    <FeaturesGrid />
-    <ComparisonTable />
-    <Pricing />
-    <Testimonials />
-    <Testimonial />
-    <FAQ />
-    <FinalCTA />
-  </main>
-  <Footer />
+<Layout title="Bienvenido a Futura">
+  <div style="text-align: center; padding: 4rem 0;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">🐮 Bienvenido a Futura</h1>
+    <p style="font-size: 1.25rem; color: #666; margin-bottom: 2rem;">
+      Plataforma digital para impulsar tu negocio.
+    </p>
+    
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="/blog" style="background: #0066cc; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">
+        �M Blog
+      </a>
+      <a href="/about" style="background: #f5f5f5; color: #333; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">
+        ╠ Nosotros
+      </a>
+    </div>
+    
+    <div style="margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+      <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">último artículo </h2>
+      <article style="border: 1px solid #e5e5e5; border-radius: 8px; padding: 1.5rem; text-align: left;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+          <a href="/blog/tendencias-marketing-digital-2026" style="color: #0066cc; text-decoration: none;">
+            Tendencias de Marketing Digital 2026
+          </a>
+        </h3>
+        <p style="color: #666; font-size: 0.875rem; margin-bottom: 1rem;">
+          Renata • 15 de Abril, 2026
+        </p>
+        <p style="color: #555; line-height: 1.6;">
+          Descubre las 5 tendencias de marketing digital que están definiendo 2026: IA, video corto, micro-influencers, SEO semántico y automatización.
+        </p>
+      </article>
+    </div>
+  </div>
 </Layout>
