@@ -2,89 +2,180 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import Testimonials from '../components/Testimonials.astro';
 ---
 
-<Layout title="Futura Nodes - Diseño Web & IA">
+<Astro.layout title="Futura Agencia Digital - Diseño Web, IA y Tienda Nube">
   <Navbar />
   
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg glass phase"></div>
+    <div class="hero-bg"></div>
     <div class="container hero-content">
-      <h1 class="bounce-in">Impulsamos tu negocio al <span class="text-gradient">siguiente nivel</span></h1>
-      <p class="fade-in">Diseño web de alto rendimiento, automatización con Inteligencia Artificial e e-commerce profesional. Todo para que vendas más.</p>
-      <div class="hero-actions fade-in-up">
-        <a href="/servicios" class="btn btn-primary">Ver Servicios</a>
-        <a href="/contacto" class="btn btn-secondary">Hablar con un experto</a>
+      <h1 class="hero-title">
+        Transforma tu Negocio con <span class="text-gradient">DiseƱo Web, IA y E-commerce</span>
+      </h1>
+      <p class="hero-subtitle">
+        Agencia digital especializada en crear sitios web profesionales, automatizar procesos con inteligencia artificial y lanzar tiendas en línea listas para vender.
+      </p>
+      <div class="hero-actions">
+        <a href="/contacto" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.125rem;">Solicitar Cotización Gratis</a>
+        <a href="/servicios" class="btn btn-secondary">Ver Servicios</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Proyectos Exitosos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Clientes Satisfechos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Soporte Dedicado</span>
+        </div>
       </div>
     </div>
   </section>
   
-  <!-- Servicios Principales -->
+  <!-- Servicios Section -->
   <section class="services-section" id="servicios">
     <div class="container">
-      <div class="section-header text-center mb-4">
-        <h2 style="margin-bottom: 0.5rem">Lo que hacemos mejor</h2>
-        <p>Soluciones digitales integrales diseñadas para retorno de inversión.</p>
+      <div class="section-header text-center">
+        <h2>Nuestros Servicios</h2>
+        <p>Coge de la primera consulta gratuita y descubre c0go podemos ayudarte.</p>
       </div>
       
       <div class="services-grid">
-        <!-- Servicio 1 -->
+        <!-- Servicio 1 - DisƱo Web -->
         <div class="service-card">
           <div class="service-icon" style="background: rgba(0, 102, 204, 0.1); color: var(--color-primary);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x="8" y="21" x2="16" y2="21"></line><line x="12" y="17" x2="12" y2="21"></line></svg>
           </div>
-          <h3 style="font-size: 1.5rem;">Diseño Web</h3>
-          <p>Sitios web modernos, responsivos y súper rápidos optimizados para SEO y conversión.</p>
-          <a href="/servicios#diseno-web" class="service-link">Saber más &rarr;</a>
+          <h3>Diseño Web</h3>
+          <p>Sitios web modernos, responsivos y super rápidos optimizados para SEO y conversión. Desde landing pages hasta sitios corporativos.</p>
+          <ul class="service-features">
+            <li>✅ DisƱo 100% responsivo (Mobile-first)</li>
+            <li>✅ Optimización SEO incluida</li>
+            <li>✅ Velocidad de carga optimizada</li>
+            <li>✅ Integración con redes sociales</li>
+            <li>✅ Analytics y seguimiento</li>
+          </ul>
+          <div class="service-cta">
+            <span class="price">Desde $499 USD</span>
+            <a href="/contacto" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Solicitar Demo</a>
+          </div>
         </div>
         
-        <!-- Servicio 2 -->
+        <!-- Servicio 2 - Sistemas con IA -->
         <div class="service-card">
           <div class="service-icon" style="background: rgba(0, 212, 170, 0.1); color: var(--color-secondary);">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H1.65 1.65 0 0 0 9-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
           </div>
-          <h3 style="font-size: 1.5rem;">Sistemas con IA</h3>
-          <p>Automatizamos procesos e interacciones con chatbots y agentes conversacionales.</p>
-          <a href="/servicios#ia" class="service-link">Saber más &rarr;</a>
+          <h3>Sistemas con IA</h3>
+          <p>Automatizamos procesos inteligentes que mejoran la atención al cliente y optimizan tus operaciones diarias.</p>
+          <ul class="service-features">
+            <li>✅ Chatbots inteligentes (WhatsApp, web, redes)</li>
+            <li>✅ Automatización de marketing</li>
+            <li>✅ Analisis de datos con IA</li>
+            <li>✅ Integración con herramientas existentes</li>
+            <li>✅ Agentes IA personalizados</li>
+          </ul>
+          <div class="service-cta">
+            <span class="price">Cotización Personalizada</span>
+            <a href="/contacto" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Agendar Consultoría</a>
+          </div>
         </div>
         
-        <!-- Servicio 3 -->
+        <!-- Servicio 3 - Tienda Nube -->
         <div class="service-card">
           <div class="service-icon" style="background: rgba(26, 26, 46, 0.1); color: var(--color-dark);">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
           </div>
-          <h3 style="font-size: 1.5rem;">Tienda Nube</h3>
-          <p>Tu e-commerce configurado de principio a fin, listo para empezar a vender.</p>
-          <a href="/servicios#ecommerce" class="service-link">Saber más &rarr;</a>
+          <h3>Tienda Nube</h3>
+          <p>Tu tienda en línea profesional lista para vender. Configuración completa, diseƱo personalizado y todas las herramientas que necesitas.</p>
+          <ul class="service-features">
+            <li>✅ Configuración completa de Tienda Nube</li>
+            <li>✅ DisƱo personalizado de tu marca</li>
+            <li>✅ Carga de productos inicial</li>
+            <li>✅ Integración de métodos de pago</li>
+            <li>✅ Configuración de envíos</li>
+            <li>✅ Capacitación y soporte post-lanzamiento</li>
+          </ul>
+          <div class="service-cta">
+            <span class="price">Desde $699 USD</span>
+            <a href="/contacto" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Ver Planes</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
   
-  <Testimonials />
+  <!-- Por Qué Elegirnos -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>¾Por qué elegirnos</h2>
+        <p>Mas de 500 empresas confían en nosotros para transformar su presencia digital.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Entrega Rápida</h3>
+          <p>Proyectos entregados en tiempo rãcord sin comprometer calidad.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>DisƱo que Convierte</h3>
+          <p>No solo hacemos sitios bonitos, creamos experiencias que venden.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Tecnología de Punta</h3>
+          <p>Usamos las ultimas herramientas y tendencias del mercado.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💤</div>
+          <h3>Soporte Dedicado</h3>
+          <p>Acompűamiento completo antes, durante y despu�s del proyecto.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💤</div>
+          <h3>Precios Transparentes</h3>
+          <p>Sin costos ocultos. Sabrás exactamente qué estás pagando.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💤</div>
+          <h3>Enfoque en Resultados</h3>
+          <p>Medimos el éxito de tu proyecto con métricas reales de conversión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container text-center">
-      <h2 style="color: white; margin-bottom: 1.5rem;">¿Listo para digitalizar tu negocio con éxito?</h2>
-      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem auto;">Agenda una llamada gratuita de 15 minutos para entender tus objetivos y ver cómo podemos ayudarte.</p>
-      <a href="/contacto" class="btn btn-secondary" style="font-size: 1.25rem; padding: 1rem 2.5rem; color: var(--color-primary); border: none;">Contactar Ahora</a>
+      <h2 style="color: white; margin-bottom: 1.5rem;">éListo para digitalizar tu negocio con é{to?</h2>
+      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 2.5rem auto; font-size: 1.125rem;">Agenda una llamada gratuita de 15 minutos para entender tus objetivos y ver cómo podemos ayudarte a horarios limitados.</p>
+      <a href="/contacto" class="btn btn-secondary" style="font-size: 1.25rem; padding: 1rem 2.5rem; border: none; color: var(--color-primary);">Agendar Llamada Gratis</a>
     </div>
   </section>
   
   <Footer />
-</Layout>
+</Astro.layout>
 
 <style>
+  /* Hero */
   .hero {
     position: relative;
-    padding: 160px 0 100px 0;
-    min-height: 85vh;
+    padding: 140px 0 80 0;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    background: linear-gradient(135deg, #F8F9FA 0%, #F0F5FF 50%, #E6F4F5 100%);
   }
   
   .hero-bg {
@@ -107,6 +198,24 @@ import Testimonials from '../components/Testimonials.astro';
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.7;
   }
   
   .hero-actions {
@@ -114,11 +223,56 @@ import Testimonials from '../components/Testimonials.astro';
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.5);
+    border-radius: 12px;
+    min-width: 140px;
+  }
+  
+  .stat-number {
+    display: block;
+    font-size: 2.5bem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
   }
   
   /* Services */
   .services-section {
     background-color: var(--color-bg-light);
+    padding: 6rem 0;
+  }
+  
+  .section-header {
+    margin-bottom: 4rem;
+  }
+  
+  .section-header h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-header p {
+    color: var(--color-text-muted);
+    font-size: 1.125rem;
   }
   
   .services-grid {
@@ -131,7 +285,7 @@ import Testimonials from '../components/Testimonials.astro';
     background: var(--color-bg);
     border-radius: var(--radius-md);
     padding: 2.5rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
     border: 1px solid rgba(0,0,0,0.03);
   }
@@ -151,17 +305,64 @@ import Testimonials from '../components/Testimonials.astro';
     margin-bottom: 1.5rem;
   }
   
-  .service-link {
-    display: inline-flex;
-    align-items: center;
-    color: var(--color-primary);
-    font-weight: 600;
-    margin-top: 1rem;
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
   }
   
-  .service-link:hover {
-    color: var(--color-primary-hover);
-    transform: translateX(5px);
+  .service-features li {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
+  }
+  
+  .service-cta {
+    margin-top: 1.5rem;
+    pt-1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .price {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  /* Features */
+  .features-section {
+    padding: 6rem 0;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .feature-card {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin: 0;
   }
   
   /* CTA */
@@ -171,43 +372,23 @@ import Testimonials from '../components/Testimonials.astro';
     margin-top: auto;
   }
   
-  /* Animations */
-  .bounce-in {
-    animation: bounceIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    opacity: 0;
-  }
-  
-  .fade-in {
-    animation: fadeIn 1s ease-in forwards;
-    animation-delay: 0.3s;
-    opacity: 0;
-  }
-  
-  .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-    animation-delay: 0.6s;
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  
-  @keyframes bounceIn {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
+  /* Responsive */
   @media (max-width: 768px) {
     .hero {
       padding: 120px 0 60px 0;
+    }
+    
+    .hero-stats {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .stat {
+      min-width: auto;
+    }
+    
+    .services-grid, .features-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>
