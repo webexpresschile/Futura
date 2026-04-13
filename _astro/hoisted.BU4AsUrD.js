@@ -1,0 +1,1 @@
+if(typeof window<"u"){const e=document.getElementById("mobileMenuBtn"),t=document.getElementById("navLinks");e&&t&&e.addEventListener("click",()=>{t.classList.toggle("active"),e.classList.toggle("active")})}
